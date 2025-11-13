@@ -1,0 +1,20 @@
+{% load static %}
+<form method="POST" enctype="multipart/form-data" action="{% url 'converter:upload' %}">
+
+    {% csrf_token %}
+    <input type="file" name="document" accept=".pdf,.txt,.docx">
+    <button type="submit">업로드</button>
+  </form>
+  
+  <div id="text-container">
+    {% if text %}
+      {% for word in text.split %}
+        <span class="word">{{ word }}</span>
+      {% endfor %}
+    {% endif %}
+  </div>
+  
+  <div id="tooltip" style="display:none;"></div>
+  
+  <script src="{% static 'static/js/converter.js' %}"></script>
+  
