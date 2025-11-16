@@ -40,10 +40,7 @@ INSTALLED_APPS = [
     'main',
     'words',
     'converter',
-<<<<<<< HEAD
     'accounts'
-=======
->>>>>>> b7a2ddb636d476b079cd6d41e6771cac0ad7b8ec
 ]
 
 LOGIN_REDIRECT_URL = '/'
