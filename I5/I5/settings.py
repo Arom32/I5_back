@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     'main',
     'words',
     'converter',
+    'accounts'
 ]
+
+LOGIN_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
