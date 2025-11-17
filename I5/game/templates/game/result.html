@@ -1,0 +1,42 @@
+{% block content %}
+<div style="text-align: center; margin-top: 50px;">
+    
+    <h1>🏁 게임 종료!</h1>
+    <div style="margin: 30px; padding: 20px; background-color: #f0f8ff; border-radius: 15px; display: inline-block;">
+        <p style="font-size: 1.2em; color: #555;">{{player_name}}님의 점수</p>
+        <h1 style="font-size: 4em; margin: 10px; color: #2196F3;">{{ score }}점</h1>
+    </div>
+
+    <br>
+    <a href="{% url 'game:main' %}">
+        <button style="padding: 15px 30px; background-color: #4CAF50; color: white; border: none; cursor: pointer; font-size: 1.1em;">
+            다시 도전하기 🎮
+        </button>
+    </a>
+
+    <hr style="margin: 40px 0; width: 60%;">
+
+    <h3>🏆 실시간 랭킹 TOP 10</h3>
+    <table border="1" style="margin: 0 auto; width: 60%; border-collapse: collapse; text-align: center;">
+        <thead style="background-color: #eee;">
+            <tr>
+                <th style="padding: 10px;">순위</th>
+                <th>이름</th>
+                <th>점수</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in leaderboard %}
+            <tr>
+                <td style="padding: 8px;">{{ forloop.counter }}위</td>
+                <td>{{ row.player_name }}</td>
+                <td>{{ row.score }}</td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="3">랭킹 정보가 없습니다.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}

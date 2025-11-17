@@ -34,6 +34,19 @@ def word_search(request):
     
     return render(request, 'words/word_search.html', context)
 
+def todays_words(request):
+    '''
+    /words/todays-words/
+    오늘의 단어 10개를 보여주는 뷰
+    '''
+    from .services import get_todays_words
+    words = get_todays_words()
+    
+    context = {
+        'words': words
+    }
+    return
+
 # 로그인 기능이 필요하므로 데코레이터 추가
 @login_required
 def toggle_bookmark(request, word_id):

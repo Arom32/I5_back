@@ -1,0 +1,1530 @@
+[
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$sPhiVwrcMgYUfq19EgArf6$a4/ir5q0BSnG6jfHa/uqDq5CPsw9XDkRpu1f0RkTHhA=",
+        "last_login": "2025-11-17T10:50:17.178Z",
+        "is_superuser": false,
+        "username": "test",
+        "first_name": "",
+        "last_name": "",
+        "email": "jhhyun2005@naver.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-11-17T10:50:16.302Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "words.word",
+    "pk": 1,
+    "fields": {
+        "text": "장애",
+        "search_count": 8,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 2,
+    "fields": {
+        "text": "화재",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 3,
+    "fields": {
+        "text": "제한",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 4,
+    "fields": {
+        "text": "이용",
+        "search_count": 2,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 5,
+    "fields": {
+        "text": "사이트",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 6,
+    "fields": {
+        "text": "공지",
+        "search_count": 4,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 7,
+    "fields": {
+        "text": "행정안전부",
+        "search_count": 2,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 8,
+    "fields": {
+        "text": "알다",
+        "search_count": 2,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 9,
+    "fields": {
+        "text": "민원",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 10,
+    "fields": {
+        "text": "서비스",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 11,
+    "fields": {
+        "text": "복구",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 12,
+    "fields": {
+        "text": "안내",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 13,
+    "fields": {
+        "text": "사항",
+        "search_count": 3,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 14,
+    "fields": {
+        "text": "대출",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 15,
+    "fields": {
+        "text": "보안",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 16,
+    "fields": {
+        "text": "문자",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 17,
+    "fields": {
+        "text": "중단",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 18,
+    "fields": {
+        "text": "발급",
+        "search_count": 2,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 19,
+    "fields": {
+        "text": "총력",
+        "search_count": 9,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 20,
+    "fields": {
+        "text": "신속하다",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 21,
+    "fields": {
+        "text": "최소",
+        "search_count": 4,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 22,
+    "fields": {
+        "text": "최선",
+        "search_count": 4,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 23,
+    "fields": {
+        "text": "협조",
+        "search_count": 4,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 24,
+    "fields": {
+        "text": "양해",
+        "search_count": 4,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 25,
+    "fields": {
+        "text": "기술하다",
+        "search_count": 3,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 26,
+    "fields": {
+        "text": "향유하다",
+        "search_count": 4,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 27,
+    "fields": {
+        "text": "문의",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 28,
+    "fields": {
+        "text": "경우",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 29,
+    "fields": {
+        "text": "가건물",
+        "search_count": 5,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 30,
+    "fields": {
+        "text": "가건축",
+        "search_count": 5,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 31,
+    "fields": {
+        "text": "결산",
+        "search_count": 4,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 32,
+    "fields": {
+        "text": "가용",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 33,
+    "fields": {
+        "text": "가처분",
+        "search_count": 7,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 34,
+    "fields": {
+        "text": "간구하다",
+        "search_count": 5,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 35,
+    "fields": {
+        "text": "감산하다",
+        "search_count": 4,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 36,
+    "fields": {
+        "text": "감산",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 37,
+    "fields": {
+        "text": "강권",
+        "search_count": 4,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 38,
+    "fields": {
+        "text": "개각",
+        "search_count": 4,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 39,
+    "fields": {
+        "text": "개소하다",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 40,
+    "fields": {
+        "text": "각출하다",
+        "search_count": 6,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 41,
+    "fields": {
+        "text": "각출",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 42,
+    "fields": {
+        "text": "구상하다",
+        "search_count": 4,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 43,
+    "fields": {
+        "text": "기약",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 44,
+    "fields": {
+        "text": "기약하다",
+        "search_count": 4,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 45,
+    "fields": {
+        "text": "날인하다",
+        "search_count": 5,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 46,
+    "fields": {
+        "text": "내사하다",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 47,
+    "fields": {
+        "text": "마진",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 48,
+    "fields": {
+        "text": "당년",
+        "search_count": 4,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 49,
+    "fields": {
+        "text": "당월",
+        "search_count": 7,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 50,
+    "fields": {
+        "text": "당일",
+        "search_count": 4,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 51,
+    "fields": {
+        "text": "도래하다",
+        "search_count": 5,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 1,
+    "fields": {
+        "word": 1,
+        "text": "광산에서, 수직 갱도의 물을 퍼 올리는 데 쓰던 장치. 두 개의 기둥을 세우고 그 사이에 나무를 가로질러 얹어, 거기에 두레박을 단 긴 줄을 감아 놓고 이 줄을 감았다 풀었다 하여 물을 퍼 올린다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 2,
+    "fields": {
+        "word": 1,
+        "text": "어떤 사물의 진행을 가로막아 거치적거리게 하거나 충분한 기능을 하지 못하게 함. 또는 그런 일."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 3,
+    "fields": {
+        "word": 2,
+        "text": "불이 나는 재앙. 또는 불로 인한 재난."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 4,
+    "fields": {
+        "word": 2,
+        "text": "절도, 강도, 사기, 횡령 따위의 재산 범죄의 대상이 되는 물건. 주로 형법(刑法)에서 사용하는 용어이다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 5,
+    "fields": {
+        "word": 2,
+        "text": "그림을 그리는 재능."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 6,
+    "fields": {
+        "word": 2,
+        "text": "그림으로 그릴 만한 대상이나 소재."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 7,
+    "fields": {
+        "word": 2,
+        "text": "재앙(災殃)과 화난(禍難)을 아울러 이르는 말."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 8,
+    "fields": {
+        "word": 3,
+        "text": "일정한 한도를 정하거나 그 한도를 넘지 못하게 막음. 또는 그렇게 정한 한계."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 9,
+    "fields": {
+        "word": 3,
+        "text": "가장자리로 끝이 되는 부분."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 10,
+    "fields": {
+        "word": 4,
+        "text": "대상을 필요에 따라 이롭게 씀."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 11,
+    "fields": {
+        "word": 4,
+        "text": "이발과 미용을 통틀어 이르는 말."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 12,
+    "fields": {
+        "word": 4,
+        "text": "평소와 다른 용모나 복장."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 13,
+    "fields": {
+        "word": 4,
+        "text": "세출 예산에서 지정된 경비를 다른 부서나 다른 항목의 경비로 돌려씀."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 14,
+    "fields": {
+        "word": 5,
+        "text": "인터넷에서 사용자들이 정보가 필요할 때 언제든지 그것을 볼 수 있도록 웹 서버에 저장된 집합체."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 15,
+    "fields": {
+        "word": 6,
+        "text": "→ 공미리."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 16,
+    "fields": {
+        "word": 6,
+        "text": "‘공지하다’의 어근."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 17,
+    "fields": {
+        "word": 6,
+        "text": "공평하여 사사로움이 없는 마음."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 18,
+    "fields": {
+        "word": 6,
+        "text": "세상에 널리 알림."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 19,
+    "fields": {
+        "word": 6,
+        "text": "여러 사람이 다 앎."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 20,
+    "fields": {
+        "word": 6,
+        "text": "집이나 밭 따위가 없는 비어 있는 땅."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 21,
+    "fields": {
+        "word": 6,
+        "text": "하늘과 땅 또는 공중과 지상을 통틀어 이르는 말."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 22,
+    "fields": {
+        "word": 6,
+        "text": "아무것도 적지 않은 비어 있는 종이."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 23,
+    "fields": {
+        "word": 7,
+        "text": "중앙 행정 기관의 하나. 법령 및 조약의 공포, 정부 조직과 정원, 전자 정부, 지방 자치 제도, 지방 재정 확립, 선거·국민 투표, 안전 및 재난에 관한 정책 수립 등에 관한 업무를 맡아본다. 2017년 7월 행정 자치부와 국민 안전처를 통합하여 신설되었다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 24,
+    "fields": {
+        "word": 8,
+        "text": "교육이나 경험, 사고 행위를 통하여 사물이나 상황에 대한 정보나 지식을 갖추다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 25,
+    "fields": {
+        "word": 9,
+        "text": "백성의 원망."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 26,
+    "fields": {
+        "word": 9,
+        "text": "주민이 행정 기관에 대하여 원하는 바를 요구하는 일."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 27,
+    "fields": {
+        "word": 10,
+        "text": "생산된 재화를 운반·배급하거나 생산·소비에 필요한 노무를 제공함."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 28,
+    "fields": {
+        "word": 11,
+        "text": "남이 저에게 해를 준 대로 저도 그에게 해를 줌."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 29,
+    "fields": {
+        "word": 11,
+        "text": "손실 이전의 상태로 회복함."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 30,
+    "fields": {
+        "word": 12,
+        "text": "어떤 내용을 소개하여 알려 줌. 또는 그런 일."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 31,
+    "fields": {
+        "word": 12,
+        "text": "등록 대장이나 명부 따위의 안."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 32,
+    "fields": {
+        "word": 13,
+        "text": "비례식, 방정식 따위에서의 넷째 항(項)."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 33,
+    "fields": {
+        "word": 13,
+        "text": "일의 항목이나 내용."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 34,
+    "fields": {
+        "word": 13,
+        "text": "구부러진 작은 골목이라는 뜻으로, 주로 유곽이 늘어선 곳을 이르는 말."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 35,
+    "fields": {
+        "word": 13,
+        "text": "거짓으로 항복함."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 36,
+    "fields": {
+        "word": 14,
+        "text": "물건을 밖으로 많이 냄."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 37,
+    "fields": {
+        "word": 14,
+        "text": "돈이나 물건 따위를 빌려주거나 빌림."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 38,
+    "fields": {
+        "word": 15,
+        "text": "안전을 유지함."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 39,
+    "fields": {
+        "word": 15,
+        "text": "눈을 보호함."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 40,
+    "fields": {
+        "word": 15,
+        "text": "임금의 보물을 올려놓는 받침."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 41,
+    "fields": {
+        "word": 16,
+        "text": "예전부터 전하여 내려오는, 한자로 된 숙어나 성구(成句) 또는 문장."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 42,
+    "fields": {
+        "word": 16,
+        "text": "인간의 언어를 적는 데 사용하는 시각적인 기호 체계. 한자 따위의 표의 문자와 로마자, 한글 따위의 표음 문자로 대별된다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 43,
+    "fields": {
+        "word": 16,
+        "text": "남한테 글자를 배움."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 44,
+    "fields": {
+        "word": 17,
+        "text": "한 편의 글의 가운데 부분."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 45,
+    "fields": {
+        "word": 17,
+        "text": "남자의 상복(喪服) 속에 입는 소매가 넓은 두루마기."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 46,
+    "fields": {
+        "word": 17,
+        "text": "수법(修法)을 하는 다섯 단(壇)의 가운데 단. 오대 명왕의 중존인 부동명왕의 단이다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 47,
+    "fields": {
+        "word": 17,
+        "text": "중도에서 끊어지거나 끊음."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 48,
+    "fields": {
+        "word": 18,
+        "text": "공공 기관 등이 신청에 따라 증명서나 영수증 따위를 발행하여 줌."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 49,
+    "fields": {
+        "word": 19,
+        "text": "전체의 모든 힘."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 50,
+    "fields": {
+        "word": 20,
+        "text": "신하로서 예속되다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 51,
+    "fields": {
+        "word": 20,
+        "text": "매우 날쌔고 빠르다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 52,
+    "fields": {
+        "word": 20,
+        "text": "신기할 정도로 몹시 빠르다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 53,
+    "fields": {
+        "word": 21,
+        "text": "수나 정도 따위가 가장 작음."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 54,
+    "fields": {
+        "word": 21,
+        "text": "양 따위가 가장 적음."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 55,
+    "fields": {
+        "word": 22,
+        "text": "여럿 가운데 가장 앞섬."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 56,
+    "fields": {
+        "word": 22,
+        "text": "가장 좋고 훌륭함. 또는 그런 일."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 57,
+    "fields": {
+        "word": 23,
+        "text": "힘을 보태어 도움."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 58,
+    "fields": {
+        "word": 23,
+        "text": "힘을 합하여 서로 조화를 이룸."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 59,
+    "fields": {
+        "word": 24,
+        "text": "지지(地支)가 미(未)로 된 해. 기미년, 을미년, 신미년 따위이다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 60,
+    "fields": {
+        "word": 24,
+        "text": "중국 남송(南宋) 영종(寧宗) 때의 화가(?~?). 자는 백(白). 호는 양풍자(梁風子). 수묵화를 백묘화(白描化)한 감필 묘법(減筆描法)을 창안하였다. 작품에 <육조도(六祖圖)> 따위가 있다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 61,
+    "fields": {
+        "word": 24,
+        "text": "남의 사정을 잘 헤아려 너그러이 받아들임."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 62,
+    "fields": {
+        "word": 25,
+        "text": "대상이나 과정의 내용과 특징을 있는 그대로 열거하거나 기록하여 서술하다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 63,
+    "fields": {
+        "word": 25,
+        "text": "이미 앞서 기술하다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 64,
+    "fields": {
+        "word": 26,
+        "text": "누리어 가지다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 65,
+    "fields": {
+        "word": 27,
+        "text": "아름답고 화려한 무늬가 있는 옷."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 66,
+    "fields": {
+        "word": 27,
+        "text": "글의 뜻."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 67,
+    "fields": {
+        "word": 27,
+        "text": "물어서 의논함."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 68,
+    "fields": {
+        "word": 28,
+        "text": "논밭을 갈 때에 부리는 소."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 69,
+    "fields": {
+        "word": 28,
+        "text": "사리나 도리."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 70,
+    "fields": {
+        "word": 28,
+        "text": "조금 내리는 비."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 71,
+    "fields": {
+        "word": 28,
+        "text": "보통 사람과 치우(癡愚) 사이에 해당하는 저능 상태."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 72,
+    "fields": {
+        "word": 28,
+        "text": "날짐승 따위의 목에 난 털이나 깃."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 73,
+    "fields": {
+        "word": 29,
+        "text": "임시로 지은 건물."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 74,
+    "fields": {
+        "word": 30,
+        "text": "임시로 하는 건축."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 75,
+    "fields": {
+        "word": 31,
+        "text": "일정한 기간 동안의 수입과 지출을 마감하여 계산함. 또는 그렇게 산출한 계산."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 76,
+    "fields": {
+        "word": 32,
+        "text": "정한 분량보다 더 씀."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 77,
+    "fields": {
+        "word": 32,
+        "text": "사용이 가능함."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 78,
+    "fields": {
+        "word": 32,
+        "text": "물질이 액체에 잘 녹음. 용매 100그램에 대하여 1그램 이상 녹을 때에 쓴다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 79,
+    "fields": {
+        "word": 32,
+        "text": "금속 따위가 비교적 낮은 온도에서도 잘 녹음."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 80,
+    "fields": {
+        "word": 32,
+        "text": "아름다운 용모."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 81,
+    "fields": {
+        "word": 32,
+        "text": "집안 살림에 드는 비용."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 82,
+    "fields": {
+        "word": 32,
+        "text": "집에서 기른 사슴의 뿔. 뿔이 여릴 때 잘라 약재로 쓴다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 83,
+    "fields": {
+        "word": 33,
+        "text": "민사 소송법에서, 금전 채권이 아닌 청구권에 대한 집행을 보전하거나 권리 관계의 다툼에 대하여 임시적인 지위를 정하기 위하여 법원이 행하는 일시적인 명령."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 84,
+    "fields": {
+        "word": 34,
+        "text": "바라고 구하다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 85,
+    "fields": {
+        "word": 34,
+        "text": "간절히 바라다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 86,
+    "fields": {
+        "word": 34,
+        "text": "살림이 몹시 어려워 가난에 쪼들리다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 87,
+    "fields": {
+        "word": 35,
+        "text": "맛이 달고 시다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 88,
+    "fields": {
+        "word": 35,
+        "text": "생산이 줄다. 또는 생산을 줄이다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 89,
+    "fields": {
+        "word": 35,
+        "text": "빼어 셈하다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 90,
+    "fields": {
+        "word": 36,
+        "text": "맛이 달고 심."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 91,
+    "fields": {
+        "word": 36,
+        "text": "생산이 줆. 또는 생산을 줄임."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 92,
+    "fields": {
+        "word": 36,
+        "text": "빼어 셈함."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 93,
+    "fields": {
+        "word": 37,
+        "text": "내키지 아니한 것을 억지로 권함."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 94,
+    "fields": {
+        "word": 37,
+        "text": "강한 힘을 가진 권력."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 95,
+    "fields": {
+        "word": 38,
+        "text": "도장이나 조각 따위를 고치어 새김."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 96,
+    "fields": {
+        "word": 38,
+        "text": "내각을 개편함."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 97,
+    "fields": {
+        "word": 39,
+        "text": "사무소나 연구소 따위와 같이 이름이 ‘소(所)’ 자로 끝나는 기관이 세워져 처음으로 일이 시작되거나 그 기관의 하루 업무가 시작되다. 또는 그렇게 하다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 98,
+    "fields": {
+        "word": 39,
+        "text": "채식만 하던 사람이 육식을 시작하다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 99,
+    "fields": {
+        "word": 40,
+        "text": "각각 나오다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 100,
+    "fields": {
+        "word": 41,
+        "text": "각각 나옴."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 101,
+    "fields": {
+        "word": 42,
+        "text": "무역 거래에서, 수량·품질·포장 따위에 계약 위반 사항이 있는 경우에 매주(賣主)에게 손해 배상을 청구하거나 이의를 제기하다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 102,
+    "fields": {
+        "word": 42,
+        "text": "앞으로 이루려는 일에 대하여 그 일의 내용이나 규모, 실현 방법 따위를 어떻게 정할 것인지 이리저리 생각하다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 103,
+    "fields": {
+        "word": 42,
+        "text": "때려서 상처를 내다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 104,
+    "fields": {
+        "word": 43,
+        "text": "신기한 효험이 있는 약."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 105,
+    "fields": {
+        "word": 43,
+        "text": "‘기약하다’의 어근."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 106,
+    "fields": {
+        "word": 43,
+        "text": "이미 해 놓은 약속."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 107,
+    "fields": {
+        "word": 43,
+        "text": "때를 정하여 약속함. 또는 그런 약속."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 108,
+    "fields": {
+        "word": 43,
+        "text": "약속을 저버림."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 109,
+    "fields": {
+        "word": 44,
+        "text": "원기(元氣)가 약하다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 110,
+    "fields": {
+        "word": 44,
+        "text": "때를 정하여 약속하다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 111,
+    "fields": {
+        "word": 44,
+        "text": "약속을 저버리다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 112,
+    "fields": {
+        "word": 45,
+        "text": "도장을 찍다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 113,
+    "fields": {
+        "word": 46,
+        "text": "겉으로 드러나지 아니하게 몰래 조사하다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 114,
+    "fields": {
+        "word": 46,
+        "text": "임금이 신하에게 물건을 내리다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 115,
+    "fields": {
+        "word": 46,
+        "text": "와서 심부름하다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 116,
+    "fields": {
+        "word": 46,
+        "text": "회사 따위에 찾아오다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 117,
+    "fields": {
+        "word": 46,
+        "text": "와서 묵다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 118,
+    "fields": {
+        "word": 47,
+        "text": "‘홍역’의 전 용어."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 119,
+    "fields": {
+        "word": 47,
+        "text": "904년부터 911년까지 쓰인 후고구려의 국호."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 120,
+    "fields": {
+        "word": 47,
+        "text": "원가와 판매가의 차액."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 121,
+    "fields": {
+        "word": 48,
+        "text": "일이 있는 바로 그해."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 122,
+    "fields": {
+        "word": 49,
+        "text": "일이 있는 바로 그달."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 123,
+    "fields": {
+        "word": 50,
+        "text": "일이 있는 바로 그날."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 124,
+    "fields": {
+        "word": 51,
+        "text": "어떤 시기나 기회가 닥쳐오다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 125,
+    "fields": {
+        "word": 51,
+        "text": "외부에서 전해져 들어오다."
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 33
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 40
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 49
+    }
+},
+{
+    "model": "game.gameuserscore",
+    "pk": 1,
+    "fields": {
+        "score": 80,
+        "user": null,
+        "player_name": "anonymous6826",
+        "date": "2025-11-17T10:49:13.290Z"
+    }
+},
+{
+    "model": "game.gameuserscore",
+    "pk": 2,
+    "fields": {
+        "score": 100,
+        "user": [
+            "test"
+        ],
+        "player_name": "test",
+        "date": "2025-11-17T10:51:35.902Z"
+    }
+}
+]

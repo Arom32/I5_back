@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'main',
     'words',
     'converter',
-    'accounts'
+    'accounts',
+    'game',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +127,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+LOGIN_REDIRECT_URL = '/'

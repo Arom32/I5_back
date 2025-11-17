@@ -51,7 +51,7 @@ def _create_word_from_api(query):
         )
 
         response.raise_for_status() 
-        print(response.text)
+        # print(response.text)
         data = response.json()
         
         
