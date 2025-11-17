@@ -1,3 +1,4 @@
+<!--
 {% load static %}
 <form method="POST" enctype="multipart/form-data" action="{% url 'converter:upload' %}">
 
@@ -5,11 +6,13 @@
     <input type="file" name="document" accept=".pdf,.txt,.docx">
     <button type="submit">업로드</button>
   </form>
-  
+
   <div id="text-container">
-    {% if text %}
-      {% for word in text.split %}
-        <span class="word">{{ word }}</span>
+    {% if paragraphs %} 
+        {% for p in paragraphs %} 
+        <p> 
+            {% for word in p.split %} <span class="word">{{ word }}</span>&nbsp; {% endfor %}
+        </p>
       {% endfor %}
     {% endif %}
   </div>
@@ -17,4 +20,49 @@
   <div id="tooltip" style="display:none;"></div>
   
   <script src="{% static 'static/js/converter.js' %}"></script>
+-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF 변환기</title>
+    
+    <link rel="stylesheet" href="{% static 'css/converter.css' %}">
+</head>
+<body>
+
+  <form method="POST" enctype="multipart/form-data" action="{% url 'converter:upload' %}">
+    {% csrf_token %}
+    <input type="file" name="document" accept=".pdf,.txt,.docx,.hwp,.hwpx">
+    <button type="submit">업로드</button>
+  </form>
+
+  <div id="text-container">
+    {% if paragraphs %} 
+      {% for p in paragraphs %} 
+      <p> 
+          {% for word in p.split %} <span class="word">{{ word }}</span>&nbsp; {% endfor %}
+      </p>
+      {% endfor %}
+    {% else %}
+      <p>파일을 업로드하면 여기에 내용이 표시됩니다.</p>
+    {% endif %}
+  </div>
   
+  <div id="dictionary-sidebar" style="display:none;">
+    <span id="close-sidebar">&times;</span>
+    <h4>단어 뜻</h4>
+    <div id="dictionary-content">
+      </div>
+  </div>
+  
+  <script>
+    const MEANING_URL = "{% url 'converter:meaning' %}";
+  </script>
+  
+  <script src="{% static 'js/converter.js' %}"></script>
+
+</body>
+</html>
