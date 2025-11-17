@@ -48,5 +48,6 @@ def logout_view(request):
     로그아웃 
     """
     logout(request)
-    return redirect(settings.LOGOUT_REDIRECT_URL)
+    return render(request, 'accounts/logout.html')
+
 
