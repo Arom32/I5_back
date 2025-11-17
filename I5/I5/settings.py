@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-w&@)6lxaxmw00d@ps-^*+ss+iytx=pvp1#ya&p23u!rgor_fdb
 DEBUG = True
 
 ALLOWED_HOSTS = []
+LOGIN_REDIRECT_URL='/'
 
 
 # Application definition
