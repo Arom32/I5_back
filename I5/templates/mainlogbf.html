@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+    <title>메인화면(로그인전)</title>
+    <link rel="stylesheet" href="{% static 'css/mainbf.css' %}">
+</head>
+<body>
+    <script src="{% static 'js/mainbf.js' %}"></script>
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="header clearfix">
+                    <h1>
+                        <a href="#">
+                            <em><img src="img/logo.png" alt="로고 혹은 이름"></em>
+                        </a>    
+                    </h1>
+                    <nav class="nav">
+                        <ul class="clearfix">
+                            <li><a href="accounts/login">로그인</a></li>
+                            <li><a href="accounts/signup">회원가입</a></li>
+                            <li><a href="#">프로필</a></li>
+                        </ul>
+                        <div class="search-box">
+                            <input type="text" placeholder="검색하세요">
+                            <button class="search-btn" aria-label;="검색"></button>
+                        </div>
+                    </nav>    
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="mian-content">
+        <div class="contationer">
+            <section class="hero-section">
+                <div class="hero-wrapper">
+                    <div class="hero-text">
+                        <h1>어려운 단어, 쉽게 이해해보세요</h1>
+                        <p>문해력이 낮아도, 외국인이어도 누구나 쉽게 단어를 학습할 수 있는 서비스입니다.</p>
+                        <div class="button-group">
+                            <button class="btn btn-primary">단어 찾기 바로가기</button>
+                            <button class="btn btn-secondary">시작하기</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="feature-section">
+                <h2 class="section-title">주요 기능</h2>
+                <div class="feature-cards-wrapper">
+                    <a href="words/dictionary">
+                    <article class="feature-card">
+                        <div class="card-content">
+                            <h3>단어 찾기</h3>
+                        </div>
+                    </article>
+                    </a>
+                    <a href="words/bookmarklist">
+                    <article class="feature-card">
+                        <div class="card-content">
+                            <h3>단어장</h3>
+                        </div>
+                    </article>
+                    </a>
+                    <a href="game">
+                    <article class="feature-card">
+                        <div class="card-content">
+                            <h3>미니게임</h3>
+                        </div>
+                    </article>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="mian-footer">
+        <div class="footer-Links">
+            <a href="#">서비스 정보</a>
+            <span>|</span>
+            <a href="#">문의</a>
+            <span>|</span>
+            <a href="#">이용약관</a>
+        </div>
+    </footer>
+</body>
+</html>
