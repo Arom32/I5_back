@@ -37,7 +37,7 @@ def word_search(request):
 def todays_words(request):
     '''
     /words/todays-words/
-    오늘의 단어 10개를 보여주는 뷰
+    
     '''
     from .services import get_todays_words
     words = get_todays_words()
