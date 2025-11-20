@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -5,10 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
     <title>메인화면(로그인후)</title>
-    <link rel="stylesheet" href="mainaf.css">
+    <link rel="stylesheet" href="{% static 'css/mainaf.css' %}">
 </head>
 <body>
-    <script src="mainaf.js"></script>
+    <script src="{% static 'js/mainaf.js' %}"></script>
     <header id="header">
         <div class="container">
             <div class="row">
