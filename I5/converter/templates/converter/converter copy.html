@@ -1,0 +1,95 @@
+<!--
+{% load static %}
+<form method="POST" enctype="multipart/form-data" action="{% url 'converter:upload' %}">
+
+    {% csrf_token %}
+    <input type="file" name="document" accept=".pdf,.txt,.docx">
+    <button type="submit">업로드</button>
+  </form>
+
+  <div id="text-container">
+    {% if paragraphs %} 
+        {% for p in paragraphs %} 
+        <p> 
+            {% for word in p.split %} <span class="word">{{ word }}</span>&nbsp; {% endfor %}
+        </p>
+      {% endfor %}
+    {% endif %}
+  </div>
+  
+  <div id="tooltip" style="display:none;"></div>
+  
+  <script src="{% static 'static/js/converter.js' %}"></script>
+-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+    <title>단어 문장/변환</title>
+    
+   <link rel="stylesheet" href="{% static 'css/docs1.css' %}">
+</head>
+<body>
+    <header id="header">
+        <div class="header-content-container">
+            <div class="top-row">
+                <div class="header clearfix">
+                    <h1>
+                        <a href="{% url 'main' %}">
+                            <em><img src="assets/img/logo.png" alt="로고"></em>
+                        </a>    
+                    </h1>
+                    <nav class="nav">
+                        <ul class="clearfix">
+                            <li><a href="#">홈</a></li>
+                        </ul>
+                        <div class="search-box">
+                            <input type="text" placeholder="검색하세요">
+                            <button class="search-btn" aria-label;="검색"></button>
+                        </div>
+                    </nav>    
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-search-content">
+      <nav class="search-tabs">
+            <button class="tab-btn">단어</button>
+            <button class="tab-btn active">문서</button>
+        </nav>
+      <form method="POST" enctype="multipart/form-data" action="{% url 'converter:upload' %}">
+        {% csrf_token %}
+        <input type="file" name="document" accept=".pdf,.txt,.docx,.hwp,.hwpx">
+        <button type="submit">업로드</button>
+      </form>
+
+      <div id="text-container">
+        {% if paragraphs %} 
+          {% for p in paragraphs %} 
+          <p> 
+              {% for word in p.split %} <span class="word">{{ word }}</span>&nbsp; {% endfor %}
+          </p>
+          {% endfor %}
+        {% else %}
+          <p>파일을 업로드하면 여기에 내용이 표시됩니다.</p>
+        {% endif %}
+      </div>
+      
+      <div id="dictionary-sidebar" style="display:none;">
+        <span id="close-sidebar">&times;</span>
+        <h4>단어 뜻</h4>
+        <div id="dictionary-content">
+          </div>
+      </div>
+      
+      <script>
+        const MEANING_URL = "{% url 'converter:meaning' %}";
+      </script>
+      
+      <script src="{% static 'js/word2.js' %}"></script>
+    </main>
+</body>
+</html>

@@ -1,0 +1,151 @@
+/* 전체 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f3f6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", sans-serif;
+}
+
+/* 헤더 스타일 */
+.top-header {
+    background-color: #ffffff;
+    /* padding: 16px 24px; */
+
+    padding: 10px 24px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-top: 20px; 
+    margin-top: 0;
+}
+
+.logo-area svg {
+    /* 로고 크기 조정 */
+    width: 36px;
+    height: 36px;
+    display: block;
+}
+
+.search-area {
+    
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.header-search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d2d2d7; 
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding: 5px 5px; 
+    width: 300px; 
+}
+
+.header-search-box input {
+    width: 300px;
+    padding: 10px 40px 10px 16px;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.header-search-btn {
+    background: none; 
+    border: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-right: 0px; 
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* 탭 버튼 */
+.translation-filter {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    gap: 16px;
+}
+
+.filter-btn {
+    padding: 10px 32px;
+    border: 1px solid #d2d2d7;
+    border-radius: 20px;
+    background: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background-color: #e8f5e9;
+    border-color: #4caf50;
+    color: #2e7d32;
+    font-weight: 500;
+}
+
+
+/* 문서 뷰어 전체 영역 */
+.viewer-container {
+    width: 80%;
+    max-width: 900px;
+    background: white;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* 상단 툴바 */
+.viewer-toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    background: #f3f3f3;
+    border-radius: 6px;
+}
+
+.viewer-btn {
+    padding: 6px 12px;
+    border: 1px solid #d2d2d7;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.page-info {
+    font-size: 13px;
+    color: #555;
+}
+
+/* 문서 영역 */
+.document-area {
+    width: 100%;
+    height: 530px;
+    background: #eaecef;
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.document-page {
+    width: 420px;
+    height: 560px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}

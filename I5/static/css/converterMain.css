@@ -1,0 +1,281 @@
+/* 기본 원래 스타일 (그대로 유지) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    line-height: 1.6;
+}
+
+.app-container {
+    max-width: 100%;
+    min-height: 100vh;
+    background-color: #f5f5f7;
+}
+
+/* Header Styles */
+.top-header {
+    background-color: #ffffff;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    gap:12px;
+    margin-top:20px;
+}
+
+.search-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* === 홈 글씨체 변경을 위한 추가 스타일 === */
+.home-text {
+    font-weight: normal; /* '홈' 텍스트를 일반 굵기로 변경 */
+    color: #1d1d1f; /* 색상 유지 */
+}
+/* ================================== */
+
+
+.notification-icon {
+    font-size: 20px;
+    color: #86868b;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.notification-icon:hover {
+    color: #1d1d1f;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 280px;
+    padding: 10px 40px 10px 16px;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #0071e3;
+    box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    right: 14px;
+    color: #86868b;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Main Content */
+.app-container{
+    background-color:#ffffff;
+}
+.main-content {
+    background-color:#ffffff;
+    max-width: 580px;
+    margin: 0 auto;
+    padding: 32px 20px;
+}
+
+/* Translation Filter */
+.translation-filter {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 10px 32px;
+    border: 1px solid #d2d2d7;
+    background-color: #ffffff;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1d1d1f;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-btn:hover {
+    background-color: #f5f5f7;
+}
+
+.filter-btn.active {
+    background-color: #e8f5e9;
+    border-color: #4caf50;
+    color: #2e7d32;
+    font-weight: 500;
+}
+
+
+/* Upload Section */
+.upload-section {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 48px 40px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1d1d1f;
+    margin-bottom: 12px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+
+.guide-text {
+    font-size: 14px;
+    color: #0071e3;
+    margin-bottom: 48px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.upload-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.main-action-btn {
+    padding: 14px 48px;
+    background-color: #4cd964;
+    color: #ffffff;
+    border: none;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(76, 217, 100, 0.3);
+}
+
+.main-action-btn:hover {
+    background-color: #3dc855;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(76, 217, 100, 0.4);
+}
+
+.limit-text {
+    font-size: 13px;
+    color: #86868b;
+    margin-top: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-header {
+        padding: 12px 16px;
+    }
+
+    .search-input {
+        width: 200px;
+    }
+
+    .main-content {
+        padding: 24px 16px;
+    }
+
+    .upload-section {
+        padding: 32px 24px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .main-action-btn {
+        padding: 12px 40px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-area {
+        gap: 12px;
+    }
+
+    .search-input {
+        width: 150px;
+        padding: 8px 36px 8px 12px;
+        font-size: 13px;
+    }
+
+    .filter-btn {
+        padding: 8px 24px;
+        font-size: 14px;
+    }
+
+    .upload-section {
+        padding: 24px 16px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .guide-text {
+        font-size: 13px;
+    }
+}
+
+/* 오버라이드된 스타일 (코드 하단에 있던 내용) */
+.upload-section {
+    width: 700px;
+    padding: 70px 60px;
+    border-radius: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section-title {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.guide-text {
+    display: none !important;
+}
+
+.main-action-btn {
+    padding: 18px 60px;
+    font-size: 18px;
+    border-radius: 30px;
+}
+
+.limit-text {
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.filter-btn {
+    padding: 12px 36px;
+    font-size: 16px;
+    border-radius: 22px;
+}

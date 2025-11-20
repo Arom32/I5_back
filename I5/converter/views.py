@@ -127,7 +127,8 @@ def upload(request):
             paragraphs = text.splitlines()
 
     paragraphs = [p for p in paragraphs if p.strip()]
-    return render(request, "converter/converter.html", {"paragraphs": paragraphs})
+    #return render(request, "converter/converter.html", {"paragraphs": paragraphs})
+    return render(request, "converter/docs3.html", {"paragraphs": paragraphs})
 
 
 def meaning(request):
