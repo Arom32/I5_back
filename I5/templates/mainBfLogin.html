@@ -200,6 +200,8 @@
             <section class="feature-section">
                 <h2 class="section-title">주요 기능</h2>
                 <div class="feature-cards-wrapper">
+                    <!--단어찾기-->
+                    <a href="{% url 'words:word_search' %}">
                     <article class="feature-card">
                         <div class="card-cotent">
                             <svg width="280" height="380" viewBox="0 0 280 380" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -229,6 +231,9 @@
                             </svg>
                             </div>
                     </article>
+                    </a>
+                    <!--단어장-->
+                    <a href="{% url 'words:bookmark_list' %}">
                     <article class="feature-card">
                         <div class="card-content">
                              <svg width="280" height="380" viewBox="0 0 280 380" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -269,6 +274,9 @@
                             </svg>
                             </div>
                     </article>
+                    </a>
+                    <!--미니게임-->
+                    <a href="{% url 'game:main' %}">
                     <article class="feature-card">
                         <div class="card-content">
                             <svg width="280" height="380" viewBox="0 0 280 380" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -309,6 +317,7 @@
                             </svg>
                             </div>
                     </article>
+                    </a>
                 </div>
             </section>
             </div>
