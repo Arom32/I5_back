@@ -70,7 +70,8 @@
         {% if paragraphs %} 
           {% for p in paragraphs %} 
           <p> 
-              {% for word in p.split %} <span class="word">{{ word }}</span>&nbsp; {% endfor %}
+              {% for word in p.split %} 
+              <span class="word">{{ word }}</span>&nbsp; {% endfor %}
           </p>
           {% endfor %}
         {% else %}

@@ -37,16 +37,19 @@
             </div>
             
             <section class="upload-section active">
+                <form action="{% url 'converter:upload' %}" method="POST" enctype="multipart/form-data" id="upload-form">
+                    {% csrf_token %} <!--폼데이터 전송이 안되어 추가함-->
                 <h2 class="section-title">문서 변환</h2>
                 <p class="guide-text">PDF 파일을 업로드하고 단어를 눌러 단어의 뜻을 확인하세요.</p>
                 
                 <div class="upload-area">
-                    <input type="file" id="file-upload" accept=".pdf" style="display: none;">
+                    <input type="file" name="document" id="file-upload" accept=".pdf" style="display: none;">
                     
-                    <button id="upload-btn" class="main-action-btn">문서 업로드</button>
+                    <button type="button" id="upload-btn" class="main-action-btn">문서 업로드</button>
                     
-                    <p class="limit-text">PDF문서를 업로드 해주세요.</p>
+                    <p class="limit-text">PDF문서, docx문서 등을 업로드 해주세요.</p>
                 </div>
+                </form>
             </section>
         </main>
     </div>

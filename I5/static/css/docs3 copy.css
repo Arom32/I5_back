@@ -1,0 +1,285 @@
+/*기본 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f1f3f6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", sans-serif;
+}
+
+/* -------------------------- 헤더 (Top-Header) ----------------------------- */
+.top-header {
+    background: #fff;
+    padding: 14px 24px;
+    border-bottom: 1px solid #dcdcdc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 로고 SVG 크기 조정 */
+.logo-area svg {
+    width: 36px; 
+    height: 36px;
+    vertical-align: middle;
+}
+
+/* 홈 버튼 및 검색 기능 영역 (나란히 배치) */
+.search-area {
+    display: flex; 
+    align-items: center;
+    gap: 20px; 
+}
+
+.notification-icon {
+    font-size: 15px;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.search-box {
+    position: relative; 
+    width: 200px; 
+    display: flex; 
+    align-items: center;
+}
+
+.search-input {
+    width: 100%;
+    padding: 8px 30px 8px 10px; 
+    border: 1px solid #d2d2d7;
+    border-radius: 4px; 
+    font-size: 14px;
+    outline: none;
+    background-color: #ffffff;
+}
+
+.search-icon {
+    position: absolute;
+    right: 8px; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23999999" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>') no-repeat center;
+    background-size: contain;
+}
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------- 탭 버튼 (Translation Filter) --------------------- */
+.translation-filter {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 10px 32px;
+    border-radius: 18px;
+    background: white;
+    border: 1px solid #dcdcdc;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background-color: #e8f5e9;
+    border-color: #4caf50;
+    color: #2e7d32;
+    font-weight: 500;
+}
+
+/* -------------------------- 문서 뷰어 (Viewer) ----------------------------- */
+.content-wrapper {
+    position: relative; 
+}
+
+.viewer-container {
+    width: 70%;
+    max-width: 900px;
+    background: white;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.viewer-toolbar {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 8px 0;
+    background: #f3f3f3;
+    border-radius: 8px;
+}
+
+.viewer-btn {
+    padding: 6px 12px;
+    border: 1px solid #d2d2d7;
+    background: #fff;
+    cursor: pointer;
+}
+
+.document-area {
+    width: 100%;
+    /* 🚨 height: 530px; 제거. 고정 높이가 팽창을 막았습니다. */
+    min-height: 530px; /* 최소 높이는 유지 (내용이 없을 때 대비) */
+    height: auto; /* 내용에 따라 자동으로 늘어나도록 설정 */
+    
+    background: #eaecef;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; 대신 flex-start로 변경하여 문서를 상단부터 표시 */
+    align-items: flex-start; 
+    margin-top: 14px;
+    
+    /* ⭐️ 내용이 min-height를 넘어 화면 전체를 벗어날 경우를 대비해 스크롤 설정 */
+    overflow-y: auto; 
+}
+
+
+.document-page {
+    width: 420px;
+    /* height: 560px; (주석 처리) */
+    min-height: 560px; /* 최소 높이 */
+    background: white;
+    border-radius: 5px;
+    /*box-shadow: 0 0 4px rgba(0,0,0,0.12);*/
+    user-select: none;
+    transform-origin: center center;
+    transition: transform 0.3s ease;
+    user-select: none;
+
+    /* 추가: 문서 내용에 패딩을 주어 여백 확보 */
+    padding: 20px; 
+    /* 텍스트가 박스 너비를 벗어나지 않도록 줄바꿈 설정 */
+    word-wrap: break-word; 
+    white-space: pre-wrap; /* 공백 및 줄바꿈 유지 */
+}
+
+.word {
+    /* 클릭 가능한 단어 강조 */
+    cursor: pointer;
+}
+
+/* -------------------------- 사이드바 (Sidebar) ----------------------------- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 260px;
+    height: 100vh;
+    background: #f2f2f2;
+    padding: 20px;
+    border-left: 1px solid #ddd;
+    /* 초기 위치: 화면 밖으로 이동 */
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 50; /* 다른 요소 위에 표시 */
+}
+
+.sidebar.open {
+    /* 열렸을 때 위치: 화면 안으로 이동 */
+    transform: translateX(0);
+}
+
+.hidden {
+    /* JS가 display:none을 토글할 때 사용 */
+    display: none;
+}
+
+.close-btn {
+    border: none;
+    background: none;
+    font-size: 26px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #555;
+}
+
+.line-box {
+    width: 90%;
+    height: 14px;
+    background: #4caf50;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    
+    /* ⭐ 초기 상태 숨김 및 애니메이션을 위한 설정 */
+    opacity: 0; 
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* --- 사이드바 단어 item --- */
+.word-item {
+    position: relative;
+    background: #e8f7ec; 
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.2s ease;
+    border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+/* hover 시 그림자 효과 */
+.word-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 툴팁 (단어 설명창) */
+.tooltip {
+    position: absolute;
+    top: -35px;
+    left: 50%; 
+    transform: translateX(-50%) translateY(-5px);
+    opacity: 0;
+    background: #333; 
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    pointer-events: none; 
+    white-space: nowrap;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 100;
+}
+
+/* 말풍선 화살표 */
+.tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #333;
+}
+
+/* hover 시 툴팁 표시 */
+.word-item:hover .tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* 저장 버튼 (핀 아이콘) */
+.save-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #777;
+}

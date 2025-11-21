@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const uploadBtn = document.getElementById('upload-btn');
     const fileInput = document.getElementById('file-upload');
     const filterButtons = document.querySelectorAll('.translation-filter .filter-btn');
-    
+    const uploadForm = document.getElementById('upload-form');
     // 1. 문서 업로드 버튼 클릭 시 파일 입력창 열기
     uploadBtn.addEventListener('click', () => {
         fileInput.click();
@@ -12,7 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
     fileInput.addEventListener('change', (event) => {
         if (event.target.files.length > 0) {
             const fileName = event.target.files[0].name;
-            alert(`파일 '${fileName}' 업로드 준비 완료. 다음 화면으로 넘어갑니다.`);
+            if (uploadForm) {
+                console.log("폼 제출 시작")
+                uploadForm.submit(); // 폼 제출
+            }else{
+                console.error("업로드 폼을 찾을 수 없습니다.");
+            }
         }
     });
 

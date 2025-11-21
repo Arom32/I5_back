@@ -107,28 +107,49 @@ from words.services import find_or_create_word # <-- 이게 다시 필요합니�
 okt=Okt()
 
 def upload(request):
+    print("--디버깅 1. upload 뷰에 요청 도착착")
     paragraphs = []
     if request.method == "POST":
-        file = request.FILES["document"]
+        try:
+            file = request.FILES["document"]
+            print(f"--디버깅 2. 파일 수신 완료. 파일명: {file.name}")
+            if file.name.endswith(".pdf"):
+                reader = PyPDF2.PdfReader(file)
+                for page in reader.pages:
+                    page_text = page.extract_text()
+                    if page_text:
+                        paragraphs.extend(page_text.split('\n'))
 
-        if file.name.endswith(".pdf"):
-            reader = PyPDF2.PdfReader(file)
-            for page in reader.pages:
-                page_text = page.extract_text()
-                if page_text:
-                    paragraphs.extend(page_text.split('\n'))
+            elif file.name.endswith(".docx"):
+                doc = docx.Document(file)
+                paragraphs = [p.text for p in doc.paragraphs if p.text]
 
-        elif file.name.endswith(".docx"):
-            doc = docx.Document(file)
-            paragraphs = [p.text for p in doc.paragraphs if p.text]
+            elif file.name.endswith(".txt"):
+                text = file.read().decode("utf-8")
+                paragraphs = text.splitlines()
 
-        elif file.name.endswith(".txt"):
-            text = file.read().decode("utf-8")
-            paragraphs = text.splitlines()
+            paragraphs = [p for p in paragraphs if p.strip()]
+            print(f"--디버깅 3. 파일 처리 완료. docs3.html렌더링")
+            return render(request,"converter/docs3.html",{"paragraphs":paragraphs})
+        except PyPDF2.errors.PdfReadError as e:
+        # PDF 암호 오류 등 PyPDF2 관련 오류 처리
+            print(f"--- [오류] PDF 처리 오류 발생: {e} ---")
+            return render(request, "converter/converter.html", {"error": "PDF 파일을 읽을 수 없습니다. 파일이 손상되었거나 암호화되어 있습니다."})
+        
+        except KeyError:
+            # request.FILES["document"]가 없을 경우 (HTML 폼 문제)
+            print("--- [오류] 폼 제출 문제: 'document' 파일을 찾을 수 없음. ---")
+            return render(request, "converter/converter.html", {"error": "파일이 올바르게 첨부되지 않았습니다."})
+        
+        except Exception as e:
+            # 기타 예상치 못한 모든 오류 처리
+            print(f"--- [심각 오류] 파일 처리 중 예상치 못한 오류 발생: {e} ---")
+            return render(request, "converter/converter.html", {"error": f"파일 처리 중 오류가 발생했습니다: {e}"})
 
-    paragraphs = [p for p in paragraphs if p.strip()]
+    # GET 요청 시 (처음 접속)
+    print("--- [디버깅] 4. GET 요청: converter.html 렌더링 ---")
     #return render(request, "converter/converter.html", {"paragraphs": paragraphs})
-    return render(request, "converter/docs3.html", {"paragraphs": paragraphs})
+    return render(request, "converter/converter.html")
 
 
 def meaning(request):
