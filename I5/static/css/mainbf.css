@@ -15,7 +15,10 @@ body {
     display: block;
     clear: both;
 }
-
+a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit;        /* (선택사항) 링크 색상을 부모 요소와 똑같이 만듦 */
+}
 /* Header Styles */
 #header {
     background-color: #ffffff;

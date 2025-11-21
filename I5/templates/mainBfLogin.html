@@ -50,8 +50,8 @@
                         <p>문해력이 낮아도, 외국인이어도 누구나 쉽게 단어를 학습할 수 있는 서비스입니다.</p>
                         
                         <div class="button-group">
-                            <button class="btn btn-primary" href="words/dictionary">단어 찾기 바로가기</button> <!--링크 바꿔야함-->
-                            <button class="btn btn-secondary" href="accounts/login">시작하기</button>
+                            <button class="btn btn-primary"><a href="{% url 'words:word_search' %}">단어 찾기 바로가기</a></button> <!--링크 바꿔야함-->
+                            <button class="btn btn-secondary"><a href="{% url 'accounts:login' %}">시작하기</a></button>
                         </div>
                     </div>
                     
