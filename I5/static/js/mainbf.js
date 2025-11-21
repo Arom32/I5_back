@@ -101,14 +101,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
+            //e.preventDefault();
             const linkText = this.textContent;
             console.log(`${linkText} 클릭됨`);
             
             if(linkText === '로그인') {
-                
+                window.location.href = this.href;
             } else if (linkText === '회원가입') {
-
+                window.location.href = this.href;
             }
         });
     });
