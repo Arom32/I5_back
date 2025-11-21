@@ -4,6 +4,9 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from .forms import SignUpForm, UserUpdateForm
+from words.models import Bookmark 
+from .services import *
+
 
 def signup_view(request):
     """
@@ -53,25 +56,31 @@ def logout_view(request):
 
 @login_required
 def profile_update_view(request):
-    """
-    프로필 수정 뷰 (Update Profile)
-    """
-    if request.method == 'POST':
-        # instance=request.user: 현재 로그인된 유저 객체를 수정 대상으로 바인딩 (Model Instance Binding)
+    if request.method == 'POST':  # POST 요청인지 확인
         form = UserUpdateForm(request.POST, instance=request.user)
         if form.is_valid():
-            form.save()
-            # 수정 완료 후 이동할 URL (예: 프로필 페이지 or 메인)
-            return redirect('accounts:profile') 
-    else:
-        # GET: 기존 정보를 폼에 채워서 렌더링 (Pre-population)
-        form = UserUpdateForm(instance=request.user)
-        
-    return render(request, 'accounts/profile_update.html', {'form': form})
+            update_user_profile(form)
+            return redirect('accounts:profile')
+        else:
+            form = UserUpdateForm(instance=request.user)
+            
+        return render(request, 'accounts/profile.html', {'form': form})
 
 @login_required
 def profile_view(request):
     """
     프로필 뷰 (View Profile)
     """
-    return render(request, 'accounts/profile.html', {'user': request.user})
+    user = request.user
+    bookmark_count = Bookmark.objects.filter(user_id = user.id).count()
+    user_rank = get_user_best_rank(user)
+
+    form = UserUpdateForm(instance=user)
+
+    context = {
+        'user': user,
+        'bookmark_count' : bookmark_count,
+        'user_rank' : user_rank,
+        'form': form, 
+    }
+    return render(request, 'accounts/profile.html', context)

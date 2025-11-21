@@ -41,13 +41,13 @@
                     <div class="profile-info">
                         <div class="profile-avatar"></div>
                         <div class="profile-text">
-                            <span class="username">Username</span>
-                            <span class="email-placeholder">abcdef@naver.com</span>
+                            <span class="username">{{user.username}}</span>
+                            <span class="email-placeholder">{{user.email}}</span>
                         </div>
                     </div>
-                    <a href = "{% url 'accounts:profile_update' %}">
+                    {% comment %} <a href = "{% url 'accounts:profile_update' %}"> {% endcomment %}
                     <button class="edit-button" id="openModalBtn"   >프로필 수정</button>
-                    </a>
+                    {% comment %} </a> {% endcomment %}
                 </div>
             </section>
             
@@ -91,7 +91,7 @@
 </div>
                         <div class="card-info">
                             <p class="card-label">저장한 단어 수</p>
-                            <p class="card-count">00</p>
+                            <p class="card-count">{{bookmark_count}}</p>
                         </div>
                     </div>
                     <div class="summary-card">
@@ -107,7 +107,7 @@
 </div>
                         <div class="card-info">
                             <p class="card-label">미니 게임 랭킹</p>
-                            <p class="card-count">00위</p>
+                            <p class="card-count">{{user_rank}}위</p>
                         </div>
                     </div>
                 </div>
@@ -173,25 +173,38 @@
     
     <!-- 프로필 수정 모달 -->
     <div class="modal-overlay" id="profileModal">
-        <div class="modal-content">
-            <button class="modal-close-btn" id="closeModalBtn">&times;</button>
-            <div class="modal-profile-avatar"></div>
-            <button class="modal-image-btn">이미지 선택</button>
-            <button class="modal-image-btn">이미지 삭제</button>
-            <div class="modal-username">
-                <span>Username</span>
-                <span class="modal-edit-icon">✎</span>
-            </div>
-            <div class="modal-email">abcdef@naver.com</div>
+    <form class="modal-content" method="POST" action="{% url 'accounts:profile_update' %}">
+        {%csrf_token%}
+        <button type="button" class="modal-close-btn" id="closeModalBtn">&times;</button>
+        
+        <div class="modal-profile-avatar"></div>
+        
+        <button type="button" class="modal-image-btn">이미지 선택</button>
+        <button type="button" class="modal-image-btn">이미지 삭제</button>
+
+        <div class="modal-input-group">
+            <label for="{{ form.username.id_for_label }}">닉네임</label>
+            {{ form.username }}
             
-            <div class="modal-section-title">비밀번호</div>
-            <div class="modal-password-desc">비밀번호는 재설정이 가능합니다.<br>비밀번호를 잊으셨다면 아래 버튼을 클릭하세요.</div>
-            <button class="modal-pw-btn">비밀번호 재설정</button>
-            
-            <button class="modal-delete-btn">계정 삭제</button>
         </div>
-    </div>
+
+        <div class="modal-input-group">
+            <label for="{{ form.email.id_for_label }}">이메일</label>
+            {{ form.email }}
+        </div>
+        
+        <div class="modal-section-title">비밀번호</div>
+        <div class="modal-password-desc">
+            비밀번호는 재설정이 가능합니다.<br>
+            비밀번호를 잊으셨다면 아래 버튼을 클릭하세요.
+        </div>
+        <button type="button" class="modal-pw-btn">비밀번호 재설정</button>
+        
+        <button type="submit" class="modal-save-btn">저장하기</button>
+        
+        </form>
+</div>
     
-    <script src="script.js"></script>
+    <script src="{% static 'js/profile.js' %}"></script>
 </body>
 </html>
