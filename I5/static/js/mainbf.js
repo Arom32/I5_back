@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         threshold: 0.2,
         rootMargin: '0px 0px -50px 0px'
     };
-    
+    /*
     const observer = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, observerOptions);
+    */
     
     featureCards.forEach(card => {
         observer.observe(card);
@@ -125,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-window.addEventListener('load', function() {
+/*window.addEventListener('load', function() {
     const heroText = document.querySelector('.hero-text');
     if(heroText) {
         heroText.style.opacity = '0';
@@ -138,3 +139,4 @@ window.addEventListener('load', function() {
         }, 100);
     }
 });
+*/

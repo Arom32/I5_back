@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         threshold: 0.2,
         rootMargin: '0px 0px -50px 0px'
     };
-    
+    /*
     const observer = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, observerOptions);
+    */
     
     featureCards.forEach(card => {
         observer.observe(card);
@@ -105,11 +106,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const linkText = this.textContent;
             console.log(`${linkText} 클릭됨`);
             
-            if(linkText === '로그인') {
-                
-            } else if (linkText === '회원가입') {
-
-            }
+            if(linkText === '프로필') {
+                window.location.href = this.href;
+            } 
         });
     });
     
@@ -124,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
+/*
 window.addEventListener('load', function() {
     const heroText = document.querySelector('.hero-text');
     if(heroText) {
@@ -138,3 +137,4 @@ window.addEventListener('load', function() {
         }, 100);
     }
 });
+*/

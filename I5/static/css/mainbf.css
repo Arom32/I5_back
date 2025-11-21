@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family:Pretendard, 'Segoe UI', 'Malgun Gothic', sans-serif;
+    font-family:'Pretendard', 'Segoe UI', 'Malgun Gothic', sans-serif;
     background-color: #ffffff;
     color: #333;
 }
@@ -15,10 +15,11 @@ body {
     display: block;
     clear: both;
 }
-a {
-    text-decoration: none; /* 밑줄 제거 */
-    color: inherit;        /* (선택사항) 링크 색상을 부모 요소와 똑같이 만듦 */
+a{
+    text-decoration: none;
+    color: inherit;
 }
+
 /* Header Styles */
 #header {
     background-color: #ffffff;
@@ -45,14 +46,6 @@ a {
     display: flex;
     align-items: center;
     gap:12px;
-}
-.header h1{
-    font-size: 30px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding-left: 10px;
 }
 
 .header h1 a {
@@ -93,8 +86,6 @@ a {
     text-decoration: none;
     color: #666;
     font-size: 15px;
-    position: relative;
-    z-index: 10;
 }
 
 .nav ul li a:hover {
@@ -105,12 +96,11 @@ a {
     display: flex;
     align-items: center;
     border: 1px solid #ddd;
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 5px 15px;
     background-color: #ffffff;
-    position: relative;
-    z-index: 1;
-    /*아래 두줄은 내가 추가*/
+    
+    
 }
 
 .search-box input {
@@ -276,14 +266,14 @@ a {
 }
 
 .feature-card {
-    background: #ffffff;
+    background: transparent;
     border-radius: 25px;
-    padding: 50px 30px;
+    padding: 10px 10px;
     text-align: center;
     transition: transform 0.3s;
     cursor: pointer;
-    min-height: 250px;
-    min-width: 280px;
+    min-height: 200px;
+    min-width: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -291,9 +281,12 @@ a {
 }
 
 .feature-card:hover {
-    transform: translateY(-10px);
+    transform: scale(1.02) translateY(-10px);;
+    
 }
-
+.card-content {
+    transform: scale(1.02);
+}
 .card-content h3 {
     font-size: 28px;
     font-weight: 700;
