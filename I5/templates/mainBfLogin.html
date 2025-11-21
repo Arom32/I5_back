@@ -26,9 +26,8 @@
                     </h1>
                     <nav class="nav">
                         <ul class="clearfix">
-                            <li><a href="{% url 'accounts:login' %}">로그인</a></li>
-                            <li><a href="{% url 'accounts:signup' %}">회원가입</a></li>
-                            <li><a href="{% url 'accounts:profile' %}">프로필</a></li>
+                            <li><a href="accounts/login">로그인</a></li>
+                            <li><a href="accounts/signup">회원가입</a></li>
                         </ul>
                         <div class="search-box">
                             <input type="text" placeholder="검색하세요">
@@ -49,8 +48,8 @@
                         <p>문해력이 낮아도, 외국인이어도 누구나 쉽게 단어를 학습할 수 있는 서비스입니다.</p>
                         
                         <div class="button-group">
-                            <button class="btn btn-primary" href="{% url 'words:dictionary' %}">단어 찾기 바로가기</button> <!--링크 바꿔야함-->
-                            <button class="btn btn-secondary" href="{% url 'accounts:login' %}">시작하기</button>
+                            <button class="btn btn-primary" href="words/dictionary">단어 찾기 바로가기</button> <!--링크 바꿔야함-->
+                            <button class="btn btn-secondary" href="accounts/login">시작하기</button>
                         </div>
                     </div>
                     
@@ -202,7 +201,7 @@
                 <h2 class="section-title">주요 기능</h2>
                 <div class="feature-cards-wrapper">
                     <!--단어찾기-->
-                    <a href="{% url 'words:word_search' %}">
+                    <a href="words/dictionary">
                     <article class="feature-card">
                         <div class="card-cotent">
                             <svg width="280" height="380" viewBox="0 0 280 380" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -234,7 +233,7 @@
                     </article>
                     </a>
                     <!--단어장-->
-                    <a href="{% url 'words:bookmark_list' %}">
+                    <a href="words/bookmarklist">
                     <article class="feature-card">
                         <div class="card-content">
                              <svg width="280" height="380" viewBox="0 0 280 380" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -277,7 +276,7 @@
                     </article>
                     </a>
                     <!--미니게임-->
-                    <a href="{% url 'game:main' %}">
+                    <a href="game">
                     <article class="feature-card">
                         <div class="card-content">
                             <svg width="280" height="380" viewBox="0 0 280 380" fill="none" xmlns="http://www.w3.org/2000/svg">
