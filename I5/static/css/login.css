@@ -17,8 +17,8 @@ body {
 /* 좌측 상단 로고 */
 .logo {
     position: absolute;
-    top: 40px;  /* 여백을 좀 더 주었습니다 */
-    left: 40px;
+    top: 20px;  /* 여백을 좀 더 주었습니다 */
+    left: 20px;
     margin: 0;
 }
 
