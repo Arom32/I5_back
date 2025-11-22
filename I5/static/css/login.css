@@ -3,124 +3,147 @@
 }
 
 body {
-    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif; /* 깔끔한 폰트 적용 */
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* 화면 전체 높이 사용 */
+    min-height: 100vh;
     background-color: #FFFFFF;
     margin: 0;
-    position: relative; /* 로고 배치를 위해 필요 */
+    position: relative;
     width: 100%;
-    max-width: 1440px; /* 요청하신 최대 너비 기준 */
-    margin: 0 auto; /* 중앙 정렬 */
 }
 
 /* 좌측 상단 로고 */
 .logo {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 32px;
-    font-weight: 800;
-    color: #000;
-    text-decoration: underline; /* 이미지의 밑줄 느낌 표현 (원치 않으면 제거 가능) */
-    text-underline-offset: 5px;
+    top: 40px;  /* 여백을 좀 더 주었습니다 */
+    left: 40px;
+    margin: 0;
 }
 
 /* 로그인 박스 */
 .login-box {
-    width: 520px; /* 이미지 비율에 맞춰 너비 조정 */
-    height: auto; /* 높이 자동 조절 (중요) */
-    padding: 60px 50px; /* 넉넉한 내부 여백 */
+    width: 460px; /* 너비를 조금 더 넓혔습니다 */
+    padding: 50px 40px; /* 내부 여백을 늘려 시원하게 만듭니다 */
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
-    border-radius: 20px; /* 둥근 모서리 */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* 그림자를 더 부드럽게 */
     display: flex;
     flex-direction: column;
+    align-items: center; /* 내부 요소들을 가운데 정렬 */
 }
 
 /* '로그인' 제목 */
 h2 {
-    font-size: 40px;
+    font-size: 36px; /* 폰트 크기 키움 */
     font-weight: 700;
     color: #62C370;
-    margin: 0 0 40px 0; /* 하단 여백 */
-    text-align: left; /* 왼쪽 정렬 */
+    margin: 0 0 50px 0; /* 하단 여백 증가 */
+    text-align: center; /* 가운데 정렬 핵심 */
+    width: 100%;
+}
+
+/* 폼 태그 너비 확보 */
+#login-form {
+    width: 100%;
 }
 
 /* 폼 그룹 (라벨 + 인풋) */
 .form-group {
     margin-bottom: 25px;
     width: 100%;
+    text-align: left; /* 라벨은 왼쪽 정렬 */
 }
 
 .form-group label {
     display: block;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     color: #4E4E4E;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .form-group input {
     width: 100%;
-    height: 60px;
-    padding: 0 20px;
+    padding: 15px; /* 인풋 높이 증가 */
     font-size: 16px;
     border: 1px solid #C4C4C4;
-    border-radius: 12px; /* 인풋 둥근 모서리 */
+    border-radius: 10px;
     outline: none;
     transition: border-color 0.2s;
 }
 
 .form-group input:focus {
-    border-color: #62C370; /* 포커스 시 초록색 */
+    border-color: #62C370;
 }
 
 /* 옵션 영역 (자동 로그인 / 비번 찾기) */
 .options {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* 양끝 정렬 */
     align-items: center;
     margin-bottom: 40px;
-    font-size: 16px;
-    color: #4E4E4E;
+    width: 100%;
+    font-size: 15px;
+    color: #555;
 }
 
 .auto-login {
     display: flex;
     align-items: center;
+    gap: 8px; /* 체크박스와 글자 사이 간격 */
     cursor: pointer;
 }
 
-/* 커스텀 체크박스 스타일 (원형 느낌) */
+/* 체크박스 스타일 */
 .auto-login input[type="checkbox"] {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    accent-color: #62C370; /* 체크 시 초록색 */
+    appearance: none;
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 1.5px solid #C4C4C4;
+    border-radius: 50%; /* 원형 */
     cursor: pointer;
+    background-color: #fff;
+    margin: 0; /* 마진 제거 후 gap 사용 */
+    display: grid;
+    place-content: center;
+}
+
+.auto-login input[type="checkbox"]:checked {
+    background-color: #62C370;
+    border-color: #62C370;
+}
+
+.auto-login input[type="checkbox"]:checked::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .forgot-pw {
-    color: #4E4E4E;
+    color: #555;
     text-decoration: none;
+    font-size: 15px;
 }
 
 /* 로그인 버튼 */
 .login-button {
     width: 100%;
-    height: 65px;
+    height: 60px;
     background-color: #62C370;
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     border: none;
-    border-radius: 12px;
+    border-radius: 10px;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     transition: background-color 0.2s;
 }
 
@@ -130,22 +153,26 @@ h2 {
 
 /* 하단 회원가입 링크 */
 .signup {
-    text-align: center;
     font-size: 15px;
     color: #4E4E4E;
+    display: flex;
+    justify-content: center; /* 가운데 정렬 */
+    align-items: center;
+}
+
+.signup span {
+    margin-right: 8px;
 }
 
 .signup a {
     color: #62C370;
     text-decoration: none;
     font-weight: 600;
-    margin-left: 10px;
 }
 
-/* 에러 메시지 공간 (필요시 활성화) */
+/* 에러 메시지 */
 .error-message {
     color: #e04a4a;
     font-size: 13px;
     margin-top: 5px;
-    display: none; /* 기본은 숨김 */
 }

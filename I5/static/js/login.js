@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.getElementById("login-form");
     
     // 입력창 2개 (로그인은 아이디/비번만 필요)
-    const useridInput = document.getElementById("userid");
-    const userpwInput = document.getElementById("userpw");
+    const useridInput = document.getElementById("username");
+    const userpwInput = document.getElementById("password");
 
     // 에러 메시지 2개
     const idError = document.getElementById("id-error");
