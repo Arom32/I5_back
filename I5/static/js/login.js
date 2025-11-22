@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // isValid 변수가 true라면 로그인 성공 처리
         if (isValid) {
             alert("로그인 성공!");
-            // 실제 서버 전송 시: loginForm.submit();
+            loginForm.submit();
         }
         
     });
