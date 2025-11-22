@@ -3,22 +3,22 @@ const tabButtons = document.querySelectorAll('.tab-btn');
 
 tabButtons.forEach(button => {
     button.addEventListener('click', function() {
-        // 모든 탭에서 active 클래스 제거
-        tabButtons.forEach(btn => btn.classList.remove('active'));
-        // 클릭된 탭에 active 클래스 추가
-        this.classList.add('active');
+        // // 모든 탭에서 active 클래스 제거
+        // tabButtons.forEach(btn => btn.classList.remove('active'));
+        // // 클릭된 탭에 active 클래스 추가
+        // this.classList.add('active');
         
-        // 탭에 따라 제목과 설명 변경
-        const searchTitle = document.querySelector('.search-word-tabs h2');
-        const searchDesc = document.querySelector('.search-word-tabs p');
-        const searchInput = document.querySelector('.mian-search-input-wrapper input');
+        // // 탭에 따라 제목과 설명 변경
+        // const searchTitle = document.querySelector('.search-word-tabs h2');
+        // const searchDesc = document.querySelector('.search-word-tabs p');
+        // const searchInput = document.querySelector('.mian-search-input-wrapper input');
         
         if(this.textContent === '단어') {
-            searchTitle.textContent = '단어 검색';
-            searchDesc.textContent = '어려운 단어를 입력하면 쉬운 해설과 대체 표현을 제공합니다.';
-            searchInput.placeholder = '어려운 단어를 입력하세요...';
+            window.location.href = '/words/dictionary/';
         } else {
-            // <a href="{% url 'converter:upload'%}"> 문서 변환 페이지로 이동</a>
+            // searchTitle.textContent = '문서 검색';
+            // searchDesc.textContent = '문서를 업로드하면 어려운 표현을 쉽게 변환해드립니다.';
+            // searchInput.placeholder = '문서를 검색하세요...';
             window.location.href = '/converter/';
         }
     });
