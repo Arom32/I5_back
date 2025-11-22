@@ -1,0 +1,77 @@
+/* 기본 설정 및 폰트 적용 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard', 'Noto Sans KR', sans-serif; 
+}
+
+/* 1. 화면 전체를 채우는 컨테이너로 변경 */
+.container {
+    width: 100vw;    /* 브라우저 전체 너비 (Viewport Width) */
+    height: 100vh;   /* 브라우저 전체 높이 (Viewport Height) */
+    background-color: #ffffff; 
+    display: flex;            
+    justify-content: center;  
+    align-items: center;      
+}
+
+/* 흰색 팝업 박스 */
+.modal {
+    /* 2. 위로 올라가는 현상 제거를 위해 transform 삭제 또는 주석 처리 */
+    /* transform: translateY(-150px); */ 
+    
+    background-color: #ffffff;
+    padding: 40px 60px;       
+    border: 1px solid black;
+    border-radius: 16px;      
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    text-align: center;       
+    align-items: center; 
+    display: flex;
+    flex-direction: column;
+    gap: 30px;                
+}
+
+/* 아래 내용은 기존과 동일 */
+.message {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333333;
+    letter-spacing: -0.5px;   
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 12px;                
+}
+
+button {
+    padding: 12px 28px;       
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;       
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-back {
+    background-color: #ffffff;
+    border: 1px solid #d1d1d1; 
+    color: #666666;
+}
+
+.btn-back:hover {
+    background-color: #f9f9f9;
+}
+
+.btn-logout {
+    background-color: #4a90e2; 
+    border: none;
+    color: #ffffff;
+}
+
+.btn-logout:hover {
+    background-color: #357abd; 
+}

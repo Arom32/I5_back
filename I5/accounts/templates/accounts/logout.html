@@ -1,18 +1,44 @@
-{%load static %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로그아웃</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style> body { font-family: "Inter", sans-serif; } </style> 
+    <title>로그아웃 확인</title>
+    <link rel="stylesheet" href="{% static '/css/logout.css'%}">
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="w-full max  
-    -md p-8 bg-white rounded-2xl shadow-xl text-center">
-        <h1 class="text-3xl font-bold mb-6">로그아웃 되었습니다</h1>
-        <p class="mb-6">다음에 또 방문해 주세요!</p>
-</div>  
+<body>
+
+    <div class="container">
+        <div class="modal">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_367_370)">
+                    <path d="M0 20C0 8.9543 8.9543 0 20 0H80C91.0456 0 100 8.9543 100 20V80C100 91.0456 91.0456 100 80 100H20C8.9543 100 0 91.0456 0 80V20Z" fill="#62C370"/>
+                    <path d="M25 29.7422H16V74.7422H82V63.7422" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M25 23.7398C27.947 21.7148 31.3914 24.0002 52 28.7262V74.0434C40.0728 65.0762 32.8166 67.7278 25 66.7262V23.7398Z" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M53 73.7504C59.0622 68.5748 66.4128 66.9816 76 67.7418" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M60 42C60 39.7908 61.7908 38 64 38H88C90.2092 38 92 39.7908 92 42V54C92 56.2092 90.2092 58 88 58H64C61.7908 58 60 56.2092 60 54V42Z" fill="#4A90E2"/>
+                    <path d="M69.399 50.2111C69.0396 50.2111 68.7076 50.1211 68.403 49.9415C68.0982 49.7619 67.856 49.5235 67.6764 49.2267C67.5046 48.9219 67.4224 48.5939 67.4302 48.2423C67.4224 47.8907 67.5046 47.5665 67.6764 47.2697C67.856 46.9727 68.0982 46.7383 68.403 46.5665C68.7076 46.3869 69.0396 46.2969 69.399 46.2969C69.735 46.2969 70.0514 46.3869 70.3482 46.5665C70.653 46.7383 70.8952 46.9727 71.0748 47.2697C71.2546 47.5665 71.3444 47.8907 71.3444 48.2423C71.3444 48.5939 71.2546 48.9219 71.0748 49.2267C70.8952 49.5235 70.653 49.7619 70.3482 49.9415C70.0514 50.1211 69.735 50.2111 69.399 50.2111ZM76.1724 50.2111C75.813 50.2111 75.481 50.1211 75.1764 49.9415C74.8716 49.7619 74.6296 49.5235 74.4498 49.2267C74.278 48.9219 74.196 48.5939 74.2038 48.2423C74.196 47.8907 74.278 47.5665 74.4498 47.2697C74.6296 46.9727 74.8716 46.7383 75.1764 46.5665C75.481 46.3869 75.813 46.2969 76.1724 46.2969C76.5084 46.2969 76.8248 46.3869 77.1216 46.5665C77.4264 46.7383 77.6686 46.9727 77.8482 47.2697C78.028 47.5665 78.1178 47.8907 78.1178 48.2423C78.1178 48.5939 78.028 48.9219 77.8482 49.2267C77.6686 49.5235 77.4264 49.7619 77.1216 49.9415C76.8248 50.1211 76.5084 50.2111 76.1724 50.2111ZM82.946 50.2111C82.5866 50.2111 82.2546 50.1211 81.9498 49.9415C81.6452 49.7619 81.403 49.5235 81.2232 49.2267C81.0514 48.9219 80.9694 48.5939 80.9772 48.2423C80.9694 47.8907 81.0514 47.5665 81.2232 47.2697C81.403 46.9727 81.6452 46.7383 81.9498 46.5665C82.2546 46.3869 82.5866 46.2969 82.946 46.2969C83.2818 46.2969 83.5982 46.3869 83.8952 46.5665C84.1998 46.7383 84.442 46.9727 84.6216 47.2697C84.8014 47.5665 84.8912 47.8907 84.8912 48.2423C84.8912 48.5939 84.8014 48.9219 84.6216 49.2267C84.442 49.5235 84.1998 49.7619 83.8952 49.9415C83.5982 50.1211 83.2818 50.2111 82.946 50.2111Z" fill="white"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_367_370">
+                        <rect width="100" height="100" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+
+            <h2 class="message">로그아웃하시겠습니까?</h2>
+            
+            <form id="logout-form" method="POST" style="width: 100%;">
+                {% csrf_token %}
+                <div class="button-group">
+                    <a href="{% url 'main' %}"><button type="button" class="btn-back">돌아가기</button></a>
+                    <button type="button" class="btn-logout" onclick="handleLogout()">로그아웃</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+   <script src="{% static 'js/logout.js' %}"></script>
 </body>
 </html>
