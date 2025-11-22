@@ -56,7 +56,7 @@ def logout_view(request):
 
 @login_required
 def profile_update_view(request):
-    if request.method == 'POST':  # POST 요청인지 확인
+    if request.method == 'POST':  
         form = UserUpdateForm(request.POST, instance=request.user)
         if form.is_valid():
             update_user_profile(form)

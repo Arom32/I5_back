@@ -3,9 +3,9 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>단어 문장/변환</title>
-    <link rel="stylesheet" href="{% static 'css/word1.css' %}">
+    <link rel="stylesheet" href="{% static 'css/word_search.css' %}">
 </head>
 <body>
     <header id="header">
@@ -32,7 +32,7 @@
                         </ul>
                         <div class="search-box">
                             <input type="text" placeholder="검색하세요">
-                            <button class="search-btn" aria-label;="검색"></button>
+                            <button class="search-btn" aria-label="검색"></button>
                         </div>
                     </nav>    
                 </div>
@@ -46,67 +46,68 @@
         </nav>
         <section class="search-area">
             <nav class="search-word-tabs">
-            <h2>단어 검색</h2>
-            <p>어려운 단어를 입력하면 단어의 뜻을 제공합니다.</p>
-        </nav>
-        <div class="mian-search-input-wrapper">
-            <form action="{% url 'words:word_search' %}" method="GET">
-                <input type="text" name="query" value= "{{ query|default:'' }}"  placeholder="어려운 단어를 입력하세요...">
-            </form>
-        </div>
-
-        <div>
-             {% if error_message %}
-        <div class="error">
-            <p>오류 발생: {{ error_message }}</p>
-        </div>
-            {% endif %}
-
-            {% if word %}
-            <div class="result-box">
-            <h2>{{ word.text }}</h2>
-            
-            <!-- 3. 테스트용 정보 표시 -->
-            <p>
-                <strong>검색 횟수:</strong> {{ word.search_count }} <br>
-                <strong>자주 찾는 단어:</strong> {{ word.is_frequent }}
-            </p>
-
-            <!-- 4. 뜻 목록 표시 -->
-            <div class="definitions">
-                <strong>뜻:</strong>
-                <ul>
-                {% for definition in word.definitions.all %}
-                    <li>{{ definition.text }}</li>
-                {% empty %}
-                    <li>API에서 가져온 뜻이 없습니다.</li>
-                {% endfor %}
-                </ul>
+                <h2>단어 검색</h2>
+                <p>어려운 단어를 입력하면 단어의 뜻을 제공합니다.</p>
+            </nav>
+            <div class="main-search-input-wrapper">
+                <form action="{% url 'words:word_search' %}" method="GET">
+                    <input type="text" name="query" value="{{ query|default:'' }}" placeholder="어려운 단어를 입력하세요...">
+                </form>
             </div>
 
-            <!-- 5. 북마크 토글 폼 (POST 방식) -->
-            <!-- 이 기능은 로그인이 되어 있어야 작동합니다. -->
-            {% if user.is_authenticated %}
-                   <form action="{% url 'words:toggle_bookmark' word.id %}" method="POST">
-                    {% csrf_token %}
-                     <button type="submit">
-                    {% if is_bookmarked %}
-                        ★ 북마크 취소
+            {% if query or word or error_message %}
+            <article class="card main-card">
+                <div class="card-header">
+                    <h3>
+                        {% if error_message %}
+                            <span>오류 발생: {{ error_message }}</span>
+                        {% endif %}
+                        {% if word %}
+                            {{ word.text }}
+                        {% endif %}
+                    </h3>
+                    
+                    {% if user.is_authenticated %}
+                        {% if word %}
+                        <form action="{% url 'words:toggle_bookmark' word.id %}" method="POST">
+                            {% csrf_token %}
+                            <button class="bookmark-btn">
+                                {% if is_bookmarked %}
+                                    <div class="bookmarked">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="30" height="30" rx="3" fill="#D9D9D9"/>
+                                            <path d="M8 24V8C8 7.45 8.19583 6.97917 8.5875 6.5875C8.97917 6.19583 9.45 6 10 6H20C20.55 6 21.0208 6.19583 21.4125 6.5875C21.8042 6.97917 22 7.45 22 8V24L15 21L8 24Z" fill="#4A90E2"/>
+                                        </svg>
+                                    </div>
+                                {% else %}
+                                    <div class="none-bookmarked">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="30" height="30" rx="3" fill="#D9D9D9"/>
+                                            <path d="M8 24V8C8 7.45 8.19583 6.97917 8.5875 6.5875C8.97917 6.19583 9.45 6 10 6H20C20.55 6 21.0208 6.19583 21.4125 6.5875C21.8042 6.97917 22 7.45 22 8V24L15 21L8 24Z" fill="#4A90E2"/>
+                                        </svg>
+                                    </div>
+                                {% endif %}
+                            </button>
+                        </form>
+                        {% endif %}
                     {% else %}
-                        ☆ 북마크
+                        <p><small>로그인 시 북마크할 수 있습니다.</small></p>
                     {% endif %}
-                </button>
-                </form>
-            {% else %}
-                <p><small>로그인 시 북마크할 수 있습니다.</small></p>
+                </div>
+
+                {% if query and not error_message and not word %}
+                    <p>검색 결과가 없습니다.</p>
+                {% elif word %}
+                    <div class="description">
+                        <ul>
+                        {% for definition in word.definitions.all %}
+                            <li>{{ definition.text }}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            </article>
             {% endif %}
-        </div>
-
-    {% elif query and not error_message %}
-        <p>검색 결과가 없습니다.</p>
-    {% endif %}
-
-        </div>
         </section>
     </main>
     <script src="{% static 'js/word1.js' %}"></script>

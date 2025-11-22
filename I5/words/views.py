@@ -51,7 +51,7 @@ def todays_words(request):
 @login_required
 def toggle_bookmark(request, word_id):
     """
-    북마크 토글 기능, 검색이후 단어가 뜨는 창에서 나타남. 
+    북마크 토글 기능, 검색이 후 단어가 뜨는 창에서 나타남. 
     - 로그인한 유저만 접근 가능
 
     토클 표시나 직접적으로 보이는 것은 위 word_search 에서 처리 ( is_bookmarked )
