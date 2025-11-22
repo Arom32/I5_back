@@ -9,7 +9,7 @@ const wordList = document.getElementById("word-list");
 const closeBtn = document.getElementById("closePanel");
 const zoomInBtn = document.getElementById("zoomIn");
 const zoomOutBtn = document.getElementById("zoomOut");
-
+const filterButtons = document.querySelectorAll('.translation-filter .filter-btn');
 // -------------------------- 문서 줌 기능 --------------------------
 let scale = 1;
 
@@ -220,3 +220,19 @@ if (closeBtn && sidebar) {
         }, 300); // CSS transition 시간과 맞춤
     });
 }
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // 모든 버튼에서 active 제거
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // 클릭된 버튼에 active 추가
+        button.classList.add('active');
+        if(this.textContent === '단어') {
+            searchTitle.textContent = '단어 검색';
+            searchDesc.textContent = '어려운 단어를 입력하면 단어의 뜻을 제공합니다.';
+        } else {
+            // <a href="{% url 'converter:upload'%}"> 문서 변환 페이지로 이동</a>
+            window.location.href = '/words/dictionary/';
+        }
+    });
+});
