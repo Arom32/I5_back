@@ -68,7 +68,7 @@ def gen_game_quiz():
 
 def get_player_game_result(game_id):
     '''
-    방금 끝난 게임의 유저와 점수 조회 + 등수? + 갱신된 랭킹 데이터 조회
+    방금 끝난 게임의 유저와 점수 조회 + 등수 + 갱신된 랭킹 데이터 조회
 
     '''
     score = 0

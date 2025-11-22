@@ -70,45 +70,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     
-    const observerOptions = {
-        threshold: 0.2,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    /*
-    const observer = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if(entry.isIntersecting) {
-                entry.target.style.opacity = '0';
-                entry.target.style.transform = 'translateY(30px)';
-                
-                setTimeout(() => {
-                    entry.target.style.transition = 'all 0.6s ease';
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }, 100);
-                
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-    */
-    
-    featureCards.forEach(card => {
-        observer.observe(card);
-    });
-    
     
     const navLinks = document.querySelectorAll('.nav ul li a');
     
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
             const linkText = this.textContent;
             console.log(`${linkText} 클릭됨`);
             
             if(linkText === '프로필') {
                 window.location.href = this.href;
             } 
+            else if (linkText === '회원가입') {
+                window.location.href = this.href;
+            }
         });
     });
     
@@ -123,18 +98,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-/*
-window.addEventListener('load', function() {
-    const heroText = document.querySelector('.hero-text');
-    if(heroText) {
-        heroText.style.opacity = '0';
-        heroText.style.transform = 'translateY(20px)';
-        
-        setTimeout(() => {
-            heroText.style.transition = 'all 0.8s ease';
-            heroText.style.opacity = '1';
-            heroText.style.transform = 'translateY(0)';
-        }, 100);
-    }
-});
-*/
+

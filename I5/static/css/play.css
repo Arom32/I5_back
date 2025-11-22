@@ -1,0 +1,198 @@
+/* 전체 페이지 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+/* **[수정] 화면 전체를 감싸는 컨테이너 크기 축소** */
+.container {
+    width: 80vw;
+    max-width: 900px;
+    height: 90vh;
+    max-height: 800px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.quiz-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* 상단 바 스타일 */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 35px; /* 높이 조정 */
+    margin-bottom: 15px; /* 마진 조정 */
+    flex-shrink: 0;
+}
+
+.close-btn {
+    font-size: 28px; /* 크기 조정 */
+    cursor: pointer;
+    padding-right: 10px; /* 패딩 조정 */
+    color: #333;
+    background: none;
+    border: none;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+/* 프로그레스 바 */
+.progress-bar {
+    flex-grow: 1;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 10px; /* 마진 조정 */
+}
+
+.progress-fill {
+    height: 100%;
+    width: 25%;
+    background-color: #ff4d4f;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+/* 타이머 */
+.timer {
+    font-size: 16px;
+    color: #666;
+    min-width: 40px; /* 너비 조정 */
+    text-align: right;
+}
+
+/* 제목 (단어) */
+.title {
+    text-align: center;
+    font-size: 30px; /* 크기 조정 */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px; /* 마진 조정 */
+    margin-top: 10px; /* 마진 조정 */
+}
+
+/* 옵션 그리드 */
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px; /* 간격 조정 */
+    margin-bottom: 30px; /* 마진 조정 */
+    padding: 0 5px; /* 양 옆 패딩 줄임 */
+}
+
+/* **[수정] 단어 뜻 버튼 (높이 키우기)** */
+.option-btn {
+    padding: 80px 40px; /* 높이 키우기 유지 */
+    border: none;
+    border-radius: 8px; /* 모서리 조정 */
+    background-color: white;
+    font-size: 25px; /* 폰트 크기 조정 */
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #000000;
+    
+}
+
+.option-btn:hover {
+    border-color: #4A90E2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.option-btn.selected {
+    background-color: #D0F0D0; 
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.option-btn.correct {
+    background-color: #6ac46a;
+    color: white;
+    border-color: #6ac46a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.option-btn.wrong {
+    border-color: #ff4d4f;
+    background-color: #ffe6e6;
+}
+
+
+.word-section {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; 
+    align-items: center; /* 수직 중앙 정렬 */
+    margin-top: 20px;
+    margin-bottom: 30px;
+    min-height: 60px; /* 피드백 메시지가 없어도 높이 유지 */
+}
+
+/* [수정] 제목 (단어) */
+.title {
+    margin: 0; /* 기존 마진 제거 (Grid가 간격 제어) */
+    text-align: center;
+    font-size: 40px; /* 단어 크기 조금 더 키움 */
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap; /* 단어가 줄바꿈되지 않도록 */
+}
+
+/* 피드백 영역 (왼쪽 컬럼) */
+.feedback-area {
+    text-align: right; /* 텍스트를 단어 쪽(오른쪽)으로 붙임 */
+    padding-right: 80px; /* 단어와의 간격 */
+}
+
+/* [수정] 피드백 메시지 텍스트 스타일 */
+.feedback-msg {
+    font-size: 30px;
+    font-weight: bold;
+    display: inline-block;
+    min-width: 80px; /* 메시지 길이에 따른 흔들림 방지 */
+}
+
+/* [수정] 오른쪽: 점수 영역 */
+.score {
+    text-align: left; /* 단어 쪽에서 시작해서 오른쪽으로 뻗어나감 */
+    padding-left: 50px; /* 단어와의 간격 */
+    font-size: 25px;
+    font-weight: bold;
+    color: #555;
+    display: flex; /* 점수 숫자와 텍스트 정렬 */
+    align-items: center;
+    gap: 8px;
+}
+
+/* 점수 숫자만 따로 스타일링 (HTML에 인라인 스타일 줬지만 여기서 제어 가능) */
+#score-display {
+    font-size: 25px;
+    color: #4CAF50; /* 초록색 포인트 */
+}

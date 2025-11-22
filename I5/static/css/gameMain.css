@@ -10,6 +10,7 @@ body {
 
 }
 
+
 /* --- Header --- */
 #header {
     width: 100%;
@@ -106,7 +107,6 @@ body {
     padding: 0 40px;
     margin:0;
     min-height:100vh;
-    padding-top:100px;
     padding-bottom: 100px;
 
     
@@ -248,4 +248,108 @@ body {
         float: none;
         justify-content: center;
     }
+}
+
+/* --- 랭킹 목록 --- */
+.ranking-list {
+    padding: 0 10px; /* 좌우 여백 추가 */
+}
+.ranking-title{
+    text-align: center;
+}
+.filter-label{
+    text-align:center;
+}
+
+.ranking-item {
+    display: flex;
+    justify-content: space-between; /* 양쪽 끝 정렬 (왼쪽정보 <-> 점수) */
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* 순위 + 유저정보 묶음 */
+.rank-info {
+    display: flex;
+    align-items: center;
+}
+
+/* 순위 숫자 */
+.rank {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50; 
+    width: 60px;     
+    text-align: center; /* 고정된 공간 안에서 가운데 정렬 */
+    
+    margin-right: 10px; /* 이름과의 간격 */
+    flex-shrink: 0;     /* 화면이 줄어들어도 순위 너비는 줄어들지 않음 */
+}
+
+/* [핵심] 이름과 날짜를 수직으로 쌓기 */
+.user-details {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column; /* 위아래 배치 */
+    justify-content: center;
+    align-items: flex-start; /* 왼쪽 정렬 */
+}
+
+/* 이름 스타일 */
+.username {
+    font-size: 20px; /* 기존 18px -> 20px로 확대 */
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+    
+}
+
+/* 날짜 스타일 */
+.date {
+    font-size: 13px;  /* 이름보다 작게 */
+    color: #999;      /* 연한 회색 */
+    font-weight: normal;
+}
+
+/* 점수 스타일 */
+.score {
+    font-size: 22px;
+    font-weight: bold;
+    
+    /* 색상 추가: 진한 파란색 계열 추천 (랭킹의 초록색과 대비되어 잘 보임) */
+    color: #4CAF50; 
+}
+
+/* --- 랭킹 제목 및 필터 라벨 --- */
+.ranking-title-area {
+    margin-bottom: 30px;
+}
+
+.ranking-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.filter-label {
+    font-size: 14px;
+    color: #999;
+    margin-top: 5px;
+}
+
+.ranking-container {
+    width: 100%;
+    max-width: 600px;
+    min-height: 100vh;
+    background-color: white;
+    padding: 20px 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    
+    margin: 0 auto; 
+    box-sizing: border-box; 
 }

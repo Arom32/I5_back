@@ -1,15 +1,15 @@
-{% load static %}
+{%load static%}
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>미니 게임 - 단어 실력 테스트</title>
-    <link rel="stylesheet" href="{%static 'css/gameMain.css'%}"> 
+    <title>점수 화면</title>
+    <link rel="stylesheet" href="{% static 'css/gameResult.css'%}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
 <header id="header">
     <div class="header-content-container">
         <div class="top-row">
@@ -43,30 +43,16 @@
         </div>
     </div>
 </header>
+    
 <div class="container">
-    <main class="main-content">
-        <h2>미니 게임</h2>
-        <p class="subtitle">재미있게 단어 실력을 테스트해보세요!</p>
-
-        <div class="game-options">
-            
-            <div class="card card-select" onclick="requestGameStart()">
-                <span class="material-icons card-icon">format_list_bulleted</span> <div class="card-text">
-                    {% if user.is_authenticated %}
-                        <h3>게임 시작!</h3>
-                        <p>환영합니다. <strong>{{ user.username }}</strong>님! <br> 4개의 보기 중에서 제시된 단어에 맞는 뜻을 고르세요</p>
-                    {% else %}
-                        <h3>게임 시작!</h3>
-                        <p>환영합니다. <br> 4개의 보기 중에서 제시된 단어에 맞는 뜻을 고르세요</p>
-                    {% endif %}
-                    
-                    <p></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="ranking-container">
-
+    <div class="result-options">
+        <p class="score-label">{{player_name}}님의 점수</p>
+        <p class="score-value" id="current-score">{{ score }}점</p> 
+        <a href="{% url 'game:main' %}">
+            <button class="retry-btn" >다시 도전하기</button>
+        </a>
+    </div>
+    <div class="ranking-container">
             <div class="ranking-title-area">
                 <h2 class="ranking-title">랭킹</h2>
             </div>
@@ -76,10 +62,9 @@
                 <div class="ranking-item">
                     <div class="rank-info">
                         <div class="user-avatar"></div>
-                        <div class="rank">{{ record.rank_val }}위 &nbsp&nbsp&nbsp&nbsp  </div>
+                        <div class="rank">{{ forloop.counter }}위 &nbsp&nbsp&nbsp&nbsp  </div>
                         <div class="user-details">
                             <span class="username">{{ record.player_name }}</span>
-                            <div class="date">{{ record.date|date:"Y-m-d" }}</div>
                         </div>
                     </div>
                     <span class="score">{{ record.score }}점</span> 
@@ -89,19 +74,8 @@
                 {% endfor %}
             </div>
 
-        </div>
-
-    </main>
-
-    
+    </div>
 </div>
-
-<script>
-    window.GAME_CONFIG = {
-        startUrl: "{% url 'game:start_game' %}"
-    };
-</script>
-
-<script src="{% static 'js/gameMain.js'%}"></script>
+    <script src="{% static 'js/gameMain.js'%}"></script>
 </body>
 </html>

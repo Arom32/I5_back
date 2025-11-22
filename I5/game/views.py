@@ -1,5 +1,5 @@
 import json
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from .models import GameUserScore
 from django.db.models.functions import Rank
 from django.db.models import Window, F
@@ -19,7 +19,7 @@ def main(request):
                 expression=Rank(),           
                 order_by=F('score').desc()  
             )
-        ).order_by('rank_val')[:20]          
+        ).order_by('rank_val')[:10]          
 
         context = {
             'leaderboard': leaderboard
@@ -92,4 +92,18 @@ def game_result(request):
     game_id = request.GET.get('game_id')
     context = get_player_game_result(game_id)
 
-    return render(request, 'game/result.html', context=context)
+    return render(request, 'game/gameResult.html', context=context)
+
+def play_game(request, game_id):
+    '''
+    게임 진행 페이지
+    URL: /game/play/<int:game_id>/
+    '''
+    
+    game = get_object_or_404(GameUserScore, id=game_id)
+    
+    context = {
+        'game_id': game_id,
+        'player_name': game.player_name
+    }
+    return render(request, 'game/play.html', context)

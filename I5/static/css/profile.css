@@ -469,3 +469,55 @@ a{
     .wordbook-link { max-width: 100%; margin-left: 0; }
     .support-links { flex-direction: column; gap: 20px; }
 }
+
+.modal-content input {
+    display: block !important;      /* 강제로 보이게 함 */
+    width: 100%;                    /* 너비 꽉 채우기 */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    color: black;
+}
+.modal-input-group {
+    margin: 20px 0;
+    text-align: left; /* 왼쪽 정렬 */
+}
+
+/* 라벨 스타일 */
+.modal-input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Django 폼이 생성한 Input 태그 스타일링 */
+.modal-input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box; /* 패딩 포함 너비 계산 */
+    display: block;
+}
+
+/* 저장 버튼 스타일 */
+.modal-save-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #62C370; /* 메인 초록색 */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.modal-save-btn:hover {
+    background-color: #51a35d;
+}

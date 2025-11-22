@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단어 퀴즈</title>
+    <link rel="stylesheet" href="{%static 'css/play.css'%}">
+</head>
+<body>
+    <div class="container">
+        <div class="quiz-box">
+            <div class="header">
+                <button class="close-btn">✕</button>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+            <div class="word-section">
+                 <div class="score">
+                    SCORE <span id="score-display" style="color: #4CAF50;">0</span>
+                </div>
+                <h1 class="title" id="question-word">Loading...</h1>
+                <div class="feedback-area">
+                    <span id="feedback-msg" class="feedback-msg"></span>
+                </div>
+               
+            </div>
+            
+            <div id="options-area" class="options-grid">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.GAME_CONFIG = {
+            gameId: "{{ game_id }}",
+            urls: {
+                getQuiz: "{% url 'game:get_quiz' %}",
+                check: "{% url 'game:check_answer' %}",
+                result: "{% url 'game:game_result' %}"
+            }
+        };
+    </script>
+    <script src="{%static 'js/play.js'%}"></script>
+</body>
+</html>
