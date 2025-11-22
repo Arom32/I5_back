@@ -52,34 +52,40 @@ def _create_word_from_api(query):
 
         response.raise_for_status() 
         # print(response.text)
+
+        if not response.text.strip():
+            return None
+
         data = response.json()
         
         
         if('error' in data ):
-            error_msg = data['error']['message']
-            print(f"[S]API Error for query '{query}': {error_msg}")
-            raise Exception(f"[S]API 오류: {error_msg}")
+           return None
         
+        channel = data.get('channel')
+        if not channel or 'item' not in channel:
+            # 검색 결과가 없는 경우 (예: 없는 단어 검색)
+            return None
+
         word = Word.objects.create(
         text=query,
         search_count=1, 
         )
-        
-        # 'channel' -> 'item' (리스트) -> 'sense' -> 'definition' 구조로 파싱
-        if( 'channel' in data and 'item' in data['channel'] ):
-            items = data['channel']['item']
-            
-            # '나무1', '나무2' 처럼 여러 item이 올 수 있으므로 모두 저장
-            for item_data in items:
-                if( 'sense' in item_data and 'definition' in item_data['sense'] ):
-                    def_text = item_data['sense']['definition']
-                    Definition.objects.create(word=word, text=def_text)
+
+        items = channel['item']
+        for item_data in items:
+            if 'sense' in item_data and 'definition' in item_data['sense']:
+                def_text = item_data['sense']['definition']
+                Definition.objects.create(word=word, text=def_text)
+        return word
 
     except requests.exceptions.RequestException as e:
         print(f"[S]API Error for query '{query}': {e}")
-        raise Exception("[S]API 호출 실패")
-
-    return word      
+        return None
+    
+    except Exception as e:
+        print(f"[S]Unexpected Error: {e}")
+        return None    
 
 
 def toggle_bookmark_services(user, word_id):

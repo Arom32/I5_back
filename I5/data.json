@@ -1,1 +1,1614 @@
-[{"model": "auth.user", "pk": 1, "fields": {"password": "pbkdf2_sha256$1000000$j8HHUjgJ7VTK5nofSFlT7E$fFR52idzltj/MtpG7FGkDpQKoV909kDp6yDLiYNy9Rg=", "last_login": "2025-11-18T07:46:15.080Z", "is_superuser": false, "username": "yeoni", "first_name": "", "last_name": "", "email": "happyksy@naver.com", "is_staff": false, "is_active": true, "date_joined": "2025-11-17T16:27:37.416Z", "groups": [], "user_permissions": []}}, {"model": "sessions.session", "pk": "uxyp5pf8ueuqkr3ozn8fysg115byvcvy", "fields": {"session_data": ".eJxVjDsOwjAQBe_iGln-RjYlPWew1rtrHEC2FCcV4u4QKQW0b2beSyTY1pq2wUuaSZyFFqffLQM-uO2A7tBuXWJv6zJnuSvyoENeO_Hzcrh_BxVG_daueJt9iUzAoGzmQBhKRO2MAeRS7BTRTQW0t86igmyCsRgMucwKSLw_FkI5Eg:1vLGPn:3aFrsOyTaly9dCFfxKhV1bevLNe5VMpDdCCHn-n478c", "expire_date": "2025-12-02T07:46:15.085Z"}}, {"model": "words.word", "pk": 1, "fields": {"text": "코드", "search_count": 1, "is_frequent": false}}, {"model": "words.word", "pk": 2, "fields": {"text": "코드", "search_count": 1, "is_frequent": false}}, {"model": "words.word", "pk": 3, "fields": {"text": "코딩", "search_count": 4, "is_frequent": true}}, {"model": "words.word", "pk": 4, "fields": {"text": "사진", "search_count": 4, "is_frequent": true}}, {"model": "words.word", "pk": 5, "fields": {"text": "화장", "search_count": 2, "is_frequent": false}}, {"model": "words.word", "pk": 6, "fields": {"text": "선풍기", "search_count": 2, "is_frequent": false}}, {"model": "words.word", "pk": 7, "fields": {"text": "사전", "search_count": 2, "is_frequent": false}}, {"model": "words.definition", "pk": 1, "fields": {"word": 1, "text": "현악기에서 소리를 내는 가늘고 긴 물건."}}, {"model": "words.definition", "pk": 2, "fields": {"word": 1, "text": "어떤 사회나 계급, 직업 따위에서의 규약이나 관례."}}, {"model": "words.definition", "pk": 3, "fields": {"word": 1, "text": "가느다란 여러 개의 구리줄을 절연 재료로 싼 전깃줄."}}, {"model": "words.definition", "pk": 4, "fields": {"word": 1, "text": "부피의 단위. 목재의 부피를 계산할 때 쓴다. 1코드는 128세제곱 피트로 약 3.6246㎥에 해당한다."}}, {"model": "words.definition", "pk": 5, "fields": {"word": 2, "text": "현악기에서 소리를 내는 가늘고 긴 물건."}}, {"model": "words.definition", "pk": 6, "fields": {"word": 2, "text": "어떤 사회나 계급, 직업 따위에서의 규약이나 관례."}}, {"model": "words.definition", "pk": 7, "fields": {"word": 2, "text": "가느다란 여러 개의 구리줄을 절연 재료로 싼 전깃줄."}}, {"model": "words.definition", "pk": 8, "fields": {"word": 2, "text": "부피의 단위. 목재의 부피를 계산할 때 쓴다. 1코드는 128세제곱 피트로 약 3.6246㎥에 해당한다."}}, {"model": "words.definition", "pk": 9, "fields": {"word": 3, "text": "어떤 일의 자료나 대상에 대하여 기호를 부여하는 일."}}, {"model": "words.definition", "pk": 10, "fields": {"word": 4, "text": "벼슬아치가 규정된 시간에 근무지로 출근함."}}, {"model": "words.definition", "pk": 11, "fields": {"word": 4, "text": "조선 시대에, 궁중에서 쓰는 생선·고기·소금·땔나무·숯 따위를 공급하던 관아. 태조 원년(1392)에 설치하여 고종 19년(1882)에 없앴다."}}, {"model": "words.definition", "pk": 12, "fields": {"word": 4, "text": "연기와 같이 자욱하게 일어나는 모래 섞인 흙먼지."}}, {"model": "words.definition", "pk": 13, "fields": {"word": 4, "text": "예전에, 묵힌 땅에 대한 실태를 조사하던 일."}}, {"model": "words.definition", "pk": 14, "fields": {"word": 4, "text": "맥과 연결된 실의 끝을 잡고 그 감촉으로 살피는 진맥. 부녀자의 몸에 손을 대거나 마주 보지 않도록 벽을 사이하여 진맥한다."}}, {"model": "words.definition", "pk": 15, "fields": {"word": 4, "text": "물체의 형상을 감광막 위에 나타나도록 찍어 오랫동안 보존할 수 있게 만든 영상. 물체로부터 오는 광선을 사진기 렌즈로 모아 필름, 건판 따위에 결상(結像)을 시킨 뒤에, 이것을 현상액으로 처리하여 음화(陰畫)를 만들고 다시 인화지로 양화(陽畫)를 만든다."}}, {"model": "words.definition", "pk": 16, "fields": {"word": 5, "text": "저고리의 깃고대 중심에서 소매 끝까지의 길이."}}, {"model": "words.definition", "pk": 17, "fields": {"word": 5, "text": "화장품을 바르거나 문질러 얼굴을 곱게 꾸밈."}}, {"model": "words.definition", "pk": 18, "fields": {"word": 5, "text": "배에서 밥 짓는 일을 맡은 사람."}}, {"model": "words.definition", "pk": 19, "fields": {"word": 5, "text": "아궁이 따위에 불을 땔 때에, 불을 헤치거나 끌어내거나 거두어 넣거나 하는 데 쓰는 가느스름한 막대기."}}, {"model": "words.definition", "pk": 20, "fields": {"word": 5, "text": "시체를 불에 살라 장사 지냄."}}, {"model": "words.definition", "pk": 21, "fields": {"word": 5, "text": "예전에, 중앙 관아에 속하여 금은으로 장식한 띠를 만드는 일을 맡아 하던 사람."}}, {"model": "words.definition", "pk": 22, "fields": {"word": 5, "text": "예전에, 인조(人造) 꽃을 만드는 일을 맡아 하던 사람."}}, {"model": "words.definition", "pk": 23, "fields": {"word": 5, "text": "그림 그리는 것을 직업으로 하는 사람."}}, {"model": "words.definition", "pk": 24, "fields": {"word": 5, "text": "사슴 가죽으로 목화(木靴)를 만드는 일을 맡아 하던 사람."}}, {"model": "words.definition", "pk": 25, "fields": {"word": 6, "text": "회전축에 붙은 날개를 전동기로 돌려 바람을 일으키는 장치."}}, {"model": "words.definition", "pk": 26, "fields": {"word": 7, "text": "문헌 사료가 전혀 존재하지 않는 시대. 석기 시대와 청동기 시대를 이른다."}}, {"model": "words.definition", "pk": 27, "fields": {"word": 7, "text": "역사와 전기(傳記)를 아울러 이르는 말."}}, {"model": "words.definition", "pk": 28, "fields": {"word": 7, "text": "절이 소유하고 있는 밭."}}, {"model": "words.definition", "pk": 29, "fields": {"word": 7, "text": "신라에서, 예부에 소속되어 사찰(寺刹)에 관한 일을 맡아보던 관아."}}, {"model": "words.definition", "pk": 30, "fields": {"word": 7, "text": "살아 있는 동안."}}, {"model": "words.definition", "pk": 31, "fields": {"word": 7, "text": "죽기를 각오하고 싸움. 또는 그런 싸움."}}, {"model": "words.definition", "pk": 32, "fields": {"word": 7, "text": "개인 소유의 논밭."}}, {"model": "words.definition", "pk": 33, "fields": {"word": 7, "text": "개인의 사사로운 전보."}}, {"model": "words.definition", "pk": 34, "fields": {"word": 7, "text": "국가의 선전 포고 없이 개인이나 사사로운 단체가 외국에 대하여 전투를 하는 행위. 성격상 애국적인 행위일지라도 국제법에서는 범죄로 간주한다."}}, {"model": "words.definition", "pk": 35, "fields": {"word": 7, "text": "‘사천’의 원말."}}, {"model": "words.bookmark", "pk": 1, "fields": {"user": 1, "word": 5}}, {"model": "words.bookmark", "pk": 2, "fields": {"user": 1, "word": 6}}, {"model": "words.bookmark", "pk": 3, "fields": {"user": 1, "word": 7}}]
+[
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$MXA9q0E9URytXBDZnzbZR1$9p1Joybh7P51OrqhmWA+flx05+WzAc17Ju4f/qfHSSk=",
+        "last_login": "2025-11-22T12:25:48.697Z",
+        "is_superuser": false,
+        "username": "test",
+        "first_name": "",
+        "last_name": "",
+        "email": "jhhyun2005@naver.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-11-22T12:25:38.451Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "words.word",
+    "pk": 1,
+    "fields": {
+        "text": "가변",
+        "search_count": 6,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 2,
+    "fields": {
+        "text": "간극",
+        "search_count": 4,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 3,
+    "fields": {
+        "text": "간주하다",
+        "search_count": 8,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 4,
+    "fields": {
+        "text": "개관",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 5,
+    "fields": {
+        "text": "개괄",
+        "search_count": 11,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 6,
+    "fields": {
+        "text": "개량",
+        "search_count": 7,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 7,
+    "fields": {
+        "text": "개진하다",
+        "search_count": 2,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 8,
+    "fields": {
+        "text": "검증하다",
+        "search_count": 7,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 9,
+    "fields": {
+        "text": "견지하다",
+        "search_count": 8,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 10,
+    "fields": {
+        "text": "결부",
+        "search_count": 2,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 11,
+    "fields": {
+        "text": "경시하다",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 12,
+    "fields": {
+        "text": "고안하다",
+        "search_count": 8,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 13,
+    "fields": {
+        "text": "고양하다",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 14,
+    "fields": {
+        "text": "고양",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 15,
+    "fields": {
+        "text": "고착",
+        "search_count": 8,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 16,
+    "fields": {
+        "text": "고착화",
+        "search_count": 11,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 17,
+    "fields": {
+        "text": "고찰하다",
+        "search_count": 7,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 18,
+    "fields": {
+        "text": "고취",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 19,
+    "fields": {
+        "text": "고취하다",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 20,
+    "fields": {
+        "text": "괴리",
+        "search_count": 7,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 21,
+    "fields": {
+        "text": "국면",
+        "search_count": 7,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 22,
+    "fields": {
+        "text": "국부",
+        "search_count": 3,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 23,
+    "fields": {
+        "text": "국부적",
+        "search_count": 9,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 24,
+    "fields": {
+        "text": "국한",
+        "search_count": 2,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 25,
+    "fields": {
+        "text": "귀속",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 26,
+    "fields": {
+        "text": "기제",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 27,
+    "fields": {
+        "text": "내포",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 28,
+    "fields": {
+        "text": "당위",
+        "search_count": 7,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 29,
+    "fields": {
+        "text": "대안",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 30,
+    "fields": {
+        "text": "도모하다",
+        "search_count": 10,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 31,
+    "fields": {
+        "text": "동향",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 32,
+    "fields": {
+        "text": "매체",
+        "search_count": 9,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 33,
+    "fields": {
+        "text": "메커니즘",
+        "search_count": 11,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 34,
+    "fields": {
+        "text": "명목적",
+        "search_count": 12,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 35,
+    "fields": {
+        "text": "모색하다",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 36,
+    "fields": {
+        "text": "묵시적",
+        "search_count": 10,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 37,
+    "fields": {
+        "text": "미시적",
+        "search_count": 14,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 38,
+    "fields": {
+        "text": "거시적",
+        "search_count": 3,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 39,
+    "fields": {
+        "text": "배격",
+        "search_count": 12,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 40,
+    "fields": {
+        "text": "배타적",
+        "search_count": 12,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 41,
+    "fields": {
+        "text": "변천",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 42,
+    "fields": {
+        "text": "변혁",
+        "search_count": 11,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 43,
+    "fields": {
+        "text": "병합",
+        "search_count": 12,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 44,
+    "fields": {
+        "text": "보급",
+        "search_count": 11,
+        "is_frequent": true
+    }
+},
+{
+    "model": "words.word",
+    "pk": 45,
+    "fields": {
+        "text": "분화",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 46,
+    "fields": {
+        "text": "비약",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.word",
+    "pk": 47,
+    "fields": {
+        "text": "비약적",
+        "search_count": 1,
+        "is_frequent": false
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 1,
+    "fields": {
+        "word": 1,
+        "text": "사물의 모양이나 성질이 바뀌거나 달라질 수 있음. 또는 사물의 모양이나 성질을 바꾸거나 달라지게 할 수 있음."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 2,
+    "fields": {
+        "word": 1,
+        "text": "집안의 재앙이나 사고."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 3,
+    "fields": {
+        "word": 2,
+        "text": "사물 사이의 틈."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 4,
+    "fields": {
+        "word": 3,
+        "text": "상태, 모양, 성질 따위가 그와 같다고 보거나 그렇다고 여기다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 5,
+    "fields": {
+        "word": 4,
+        "text": "무덤을 옮길 때 관을 새로 마련함."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 6,
+    "fields": {
+        "word": 4,
+        "text": "시체가 들어 있는 관의 뚜껑을 엶."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 7,
+    "fields": {
+        "word": 4,
+        "text": "양쪽 끝이 뚫리고 속이 빈 관. 한쪽 끝에 진동하는 음차(音叉)를 가까이 대거나 공기를 불어 넣으면 내부의 공기 기둥의 진동으로 소리가 난다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 8,
+    "fields": {
+        "word": 4,
+        "text": "도서관, 영화관, 박물관, 회관 따위의 기관이 설비를 차려 놓고 처음으로 문을 엶. 또는 그렇게 함."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 9,
+    "fields": {
+        "word": 4,
+        "text": "관문(關門), 성문(城門), 세관(稅關) 따위를 엶."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 10,
+    "fields": {
+        "word": 4,
+        "text": "시체를 관에 넣고 뚜껑을 덮음."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 11,
+    "fields": {
+        "word": 4,
+        "text": "농사를 짓는 데에 필요한 물을 논밭에 댐."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 12,
+    "fields": {
+        "word": 4,
+        "text": "전체를 대강 살펴봄. 또는 그런 것."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 13,
+    "fields": {
+        "word": 5,
+        "text": "중요한 내용이나 줄거리를 대강 추려 냄."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 14,
+    "fields": {
+        "word": 6,
+        "text": "나쁜 점을 보완하여 더 좋게 고침."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 15,
+    "fields": {
+        "word": 6,
+        "text": "다시 측량함."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 16,
+    "fields": {
+        "word": 7,
+        "text": "기술이나 낡은 제도 따위가 점차 나아지게 발전하다. 또는 그렇게 만들다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 17,
+    "fields": {
+        "word": 7,
+        "text": "싸움에 이기고 진영으로 돌아오다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 18,
+    "fields": {
+        "word": 7,
+        "text": "주장이나 사실 따위를 밝히기 위하여 의견이나 내용을 드러내어 말하거나 글로 쓰다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 19,
+    "fields": {
+        "word": 7,
+        "text": "사람의 지혜나 문물이 열려 점차 발달하다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 20,
+    "fields": {
+        "word": 7,
+        "text": "나라에 흉년이 들었을 때 굶주린 백성을 구제하는 사업을 시작하다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 21,
+    "fields": {
+        "word": 8,
+        "text": "검사하여 증명하다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 22,
+    "fields": {
+        "word": 9,
+        "text": "어떤 견해나 입장 따위를 굳게 지니거나 지키다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 23,
+    "fields": {
+        "word": 10,
+        "text": "일정한 사물이나 현상을 서로 연관시킴."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 24,
+    "fields": {
+        "word": 10,
+        "text": "‘결복’의 원말."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 25,
+    "fields": {
+        "word": 10,
+        "text": "조선 시대에, 논밭의 결(結)에 따라 토지세를 거두어들일 때 쓰던 장부."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 26,
+    "fields": {
+        "word": 11,
+        "text": "고쳐 다시 시작하다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 27,
+    "fields": {
+        "word": 11,
+        "text": "집을 짓기 시작하다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 28,
+    "fields": {
+        "word": 11,
+        "text": "대수롭지 않게 보거나 업신여기다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 29,
+    "fields": {
+        "word": 12,
+        "text": "연구하여 새로운 안을 생각해 내다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 30,
+    "fields": {
+        "word": 13,
+        "text": "간곡한 말로 정중히 사양하다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 31,
+    "fields": {
+        "word": 13,
+        "text": "높이 쳐들어 올리다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 32,
+    "fields": {
+        "word": 14,
+        "text": "양(陽)만 있고 짝이 되는 음(陰)이 없는 것."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 33,
+    "fields": {
+        "word": 14,
+        "text": "넓적다리의 바깥쪽 부위."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 34,
+    "fields": {
+        "word": 14,
+        "text": "간곡한 말로 정중히 사양함."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 35,
+    "fields": {
+        "word": 14,
+        "text": "‘어린양’의 전 용어."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 36,
+    "fields": {
+        "word": 14,
+        "text": "높이 쳐들어 올림."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 37,
+    "fields": {
+        "word": 14,
+        "text": "경기도의 중앙에서 약간 서쪽에 있는 시. 쌀을 비롯한 농산물이 풍부하며, 서울 근교 농업지로서 원예 농업이 활발하다. 벽제관, 행주산성 따위의 명승지가 있다. 1992년 2월 1일 군에서 승격되었다. 면적은 268.05㎢."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 38,
+    "fields": {
+        "word": 14,
+        "text": "기름지고 비옥한 땅."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 39,
+    "fields": {
+        "word": 15,
+        "text": "물건 같은 것이 굳게 들러붙어 있음."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 40,
+    "fields": {
+        "word": 16,
+        "text": "어떤 상황이나 현상이 굳어져 변하지 않는 상태가 됨. 또는 그렇게 함."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 41,
+    "fields": {
+        "word": 17,
+        "text": "어떤 것을 깊이 생각하고 연구하다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 42,
+    "fields": {
+        "word": 18,
+        "text": "고상한 운치."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 43,
+    "fields": {
+        "word": 18,
+        "text": "북을 치고 피리를 붊."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 44,
+    "fields": {
+        "word": 18,
+        "text": "학춤에서 부리를 치는 동작."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 45,
+    "fields": {
+        "word": 19,
+        "text": "북을 치고 춤을 추다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 46,
+    "fields": {
+        "word": 20,
+        "text": "서로 어그러져 동떨어짐."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 47,
+    "fields": {
+        "word": 21,
+        "text": "어떤 일이 벌어진 장면이나 형편."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 48,
+    "fields": {
+        "word": 22,
+        "text": "전체의 어느 한 부분."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 49,
+    "fields": {
+        "word": 22,
+        "text": "나라의 아버지라는 뜻으로, ‘임금’을 이르는 말."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 50,
+    "fields": {
+        "word": 22,
+        "text": "‘국민 정부’를 줄여 이르는 말."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 51,
+    "fields": {
+        "word": 22,
+        "text": "나라가 지닌 경제력."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 52,
+    "fields": {
+        "word": 23,
+        "text": "전체의 어느 한 부분에만 한정되는 것."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 53,
+    "fields": {
+        "word": 24,
+        "text": "범위를 일정한 부분에 한정함."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 54,
+    "fields": {
+        "word": 24,
+        "text": "한글과 한자를 아울러 이르는 말."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 55,
+    "fields": {
+        "word": 25,
+        "text": "승려가 다시 속인이 됨. 또는 그런 일."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 56,
+    "fields": {
+        "word": 25,
+        "text": "재산이나 영토, 권리 따위가 특정 주체에 붙거나 딸림."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 57,
+    "fields": {
+        "word": 26,
+        "text": "해마다 사람이 죽은 날에 지내는 제사."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 58,
+    "fields": {
+        "word": 26,
+        "text": "연고나 경고 따위의 약을 만드는 바탕으로 쓰는 물질. 바셀린, 카카오 기름, 라놀린, 왁스, 파라핀 따위가 있다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 59,
+    "fields": {
+        "word": 26,
+        "text": "주문에 의하여 만드는 것이 아니고 미리 상품으로 만들어져 있는 것."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 60,
+    "fields": {
+        "word": 26,
+        "text": "일이 이미 처리되어 끝남."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 61,
+    "fields": {
+        "word": 26,
+        "text": "기계적으로 구성되어 있는 조직이나 공식 따위의 내부 구성."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 62,
+    "fields": {
+        "word": 27,
+        "text": "짐승의 내장."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 63,
+    "fields": {
+        "word": 27,
+        "text": "어떤 성질이나 뜻 따위를 속에 품음."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 64,
+    "fields": {
+        "word": 27,
+        "text": "건물의 안쪽에 짜인 공포(栱包)."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 65,
+    "fields": {
+        "word": 27,
+        "text": "대뇌 반구의 깊숙한 곳에 있는 백질(白質)의 한 부분. 대뇌 겉질과 뇌의 다른 부분 및 척수를 연결하고 있는 섬유의 집합으로 이루어져 있다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 66,
+    "fields": {
+        "word": 27,
+        "text": "바다나 호수가 육지 안으로 휘어 들어간 부분."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 67,
+    "fields": {
+        "word": 28,
+        "text": "마땅히 그렇게 하거나 되어야 하는 것."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 68,
+    "fields": {
+        "word": 28,
+        "text": "정당이나 당파가 가진 세력."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 69,
+    "fields": {
+        "word": 29,
+        "text": "신라 진평왕 때의 승려(571~644). 원효의 스승이었다고 한다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 70,
+    "fields": {
+        "word": 29,
+        "text": "‘대안하다’의 어근."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 71,
+    "fields": {
+        "word": 29,
+        "text": "어떤 안(案)을 대신하는 안."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 72,
+    "fields": {
+        "word": 29,
+        "text": "강, 호수, 바다 따위의 건너편에 있는 언덕이나 기슭."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 73,
+    "fields": {
+        "word": 29,
+        "text": "어떤 일에 대처할 방안."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 74,
+    "fields": {
+        "word": 29,
+        "text": "서로 얼굴을 마주 보고 대함."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 75,
+    "fields": {
+        "word": 29,
+        "text": "남의 얼굴을 높여 이르는 말."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 76,
+    "fields": {
+        "word": 29,
+        "text": "눈알이 잘 돌아가지 않는 병. 눈을 위로 치뜨게 된다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 77,
+    "fields": {
+        "word": 30,
+        "text": "어떤 일을 이루기 위하여 대책과 방법을 세우다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 78,
+    "fields": {
+        "word": 31,
+        "text": "겨울에 지내는 제사."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 79,
+    "fields": {
+        "word": 31,
+        "text": "고향이 같음. 또는 같은 고향."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 80,
+    "fields": {
+        "word": 31,
+        "text": "동쪽으로 향함. 또는 그 방향."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 81,
+    "fields": {
+        "word": 31,
+        "text": "사람들의 사고, 사상, 활동이나 일의 형세 따위가 움직여 가는 방향."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 82,
+    "fields": {
+        "word": 32,
+        "text": "어떤 작용을 한쪽에서 다른 쪽으로 전달하는 물체. 또는 그런 수단."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 83,
+    "fields": {
+        "word": 33,
+        "text": "사물의 작용 원리나 구조."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 84,
+    "fields": {
+        "word": 34,
+        "text": "실속은 없고 이름이나 구실만이 갖추어져 있는 것."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 85,
+    "fields": {
+        "word": 35,
+        "text": "(비유적으로) 마음이 물욕에 가리어 어리석고 무지하다. 길이 띠로 인하여 막힌다는 뜻에서 나온 말이다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 86,
+    "fields": {
+        "word": 35,
+        "text": "일이나 사건 따위를 해결할 수 있는 방법이나 실마리를 더듬어 찾다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 87,
+    "fields": {
+        "word": 36,
+        "text": "직접적으로 말이나 행동으로 드러내지 않고 은연중에 뜻을 나타내 보이는 것."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 88,
+    "fields": {
+        "word": 37,
+        "text": "사람의 감각으로 직접 식별할 수 없을 만큼 몹시 작은 현상에 관한 것."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 89,
+    "fields": {
+        "word": 38,
+        "text": "사람의 감각으로 식별할 수 있을 정도의 것."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 90,
+    "fields": {
+        "word": 38,
+        "text": "시(市) 전체가 힘을 합쳐서 하는 것."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 91,
+    "fields": {
+        "word": 39,
+        "text": "어떤 사상, 의견, 물건 따위를 물리침."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 92,
+    "fields": {
+        "word": 40,
+        "text": "남을 배척하는 것."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 93,
+    "fields": {
+        "word": 41,
+        "text": "노래를 맡은 여신. 두 개나 여덟 개의 팔을 가졌으며, 비파를 타고 아름다운 소리로 중생을 기쁘게 한다고 한다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 94,
+    "fields": {
+        "word": 41,
+        "text": "구천의 하나. 동북쪽의 하늘을 이른다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 95,
+    "fields": {
+        "word": 41,
+        "text": "세월의 흐름에 따라 바뀌고 변함."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 96,
+    "fields": {
+        "word": 42,
+        "text": "급격하게 바꾸어 아주 달라지게 함."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 97,
+    "fields": {
+        "word": 43,
+        "text": "둘 이상의 기구나 단체, 나라 따위가 하나로 합쳐짐. 또는 그렇게 만듦."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 98,
+    "fields": {
+        "word": 44,
+        "text": "널리 펴서 많은 사람들에게 골고루 미치게 하여 누리게 함."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 99,
+    "fields": {
+        "word": 44,
+        "text": "물자나 자금 따위를 계속해서 대어 줌."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 100,
+    "fields": {
+        "word": 45,
+        "text": "단순하거나 등질인 것에서 복잡하거나 이질인 것으로 변함."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 101,
+    "fields": {
+        "word": 45,
+        "text": "빼어나게 아름답다는 뜻으로, 높은 지위에 올라 귀하게 됨을 이르는 말."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 102,
+    "fields": {
+        "word": 45,
+        "text": "분(盆)에 심어 놓은 꽃."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 103,
+    "fields": {
+        "word": 45,
+        "text": "동이의 표면에 여러 가지 색채로 물들인 모래나 잔돌을 써서 산수(山水)나 화조(花鳥) 따위를 그린 그림."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 104,
+    "fields": {
+        "word": 45,
+        "text": "분꽃과의 한해살이풀. 높이는 60cm 정도이고 줄기에는 마디가 뚜렷하며, 잎은 마주나고 끝이 뾰족한 달걀 모양이다. 여름부터 가을에 걸쳐 흰색, 빨간색, 노란색의 깔때기 모양의 꽃이 취산(聚繖) 화서로 달리며 해 질 무렵부터 아침까지 핀다. 관상용이고 남아메리카가 원산지이다."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 105,
+    "fields": {
+        "word": 45,
+        "text": "‘분화하다’의 어근."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 106,
+    "fields": {
+        "word": 45,
+        "text": "불을 사름. 또는 그 불."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 107,
+    "fields": {
+        "word": 45,
+        "text": "불을 내뿜음."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 108,
+    "fields": {
+        "word": 46,
+        "text": "화투 놀이에서, 비 넉 장을 갖추어서 이루는 약."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 109,
+    "fields": {
+        "word": 46,
+        "text": "‘비약하다’의 어근."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 110,
+    "fields": {
+        "word": 46,
+        "text": "나는 듯이 높이 뛰어오름."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 111,
+    "fields": {
+        "word": 46,
+        "text": "남에게 알려지지 아니한 처방으로 지은 약."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 112,
+    "fields": {
+        "word": 46,
+        "text": "세상에 알려져 있지 않은 자기만의 뛰어난 방법."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 113,
+    "fields": {
+        "word": 46,
+        "text": "콧병에 쓰이는 약."
+    }
+},
+{
+    "model": "words.definition",
+    "pk": 114,
+    "fields": {
+        "word": 47,
+        "text": "지위나 수준 따위가 갑자기 빠른 속도로 높아지거나 향상되는 것."
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 5
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 6
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 7
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 8
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 9
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 6,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 10
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 7,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 12
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 8,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 15
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 9,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 16
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 10,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 17
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 11,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 20
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 12,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 21
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 14,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 23
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 15,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 24
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 16,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 28
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 17,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 30
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 18,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 32
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 19,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 33
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 20,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 34
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 21,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 36
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 22,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 37
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 23,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 39
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 24,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 40
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 25,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 42
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 26,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 43
+    }
+},
+{
+    "model": "words.bookmark",
+    "pk": 27,
+    "fields": {
+        "user": [
+            "test"
+        ],
+        "word": 44
+    }
+}
+]

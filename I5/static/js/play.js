@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const optionsArea = document.getElementById('options-area');
     const scoreDisplay = document.getElementById('score-display');
     const feedbackMsg = document.getElementById('feedback-msg');
+
     // --- [설정값 가져오기] ---
-    // HTML에서 정의한 설정을 가져옵니다. 없으면 에러 방지용 빈 객체
     const config = window.GAME_CONFIG || { urls: {} };
 
     // --- [상태 변수 관리] ---
@@ -23,17 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // --- [UI 초기화: 타이머 요소 생성] ---
-    // 기존 구조: [closeBtn, progressBar] -> 사이에 타이머 삽입
     const timerEl = document.createElement('span');
     timerEl.className = 'timer';
     timerEl.textContent = '00:30';
     
-    // CSS 스타일링 (필요시 play.css로 이동 가능)
+    // CSS 스타일링
     timerEl.style.fontWeight = 'bold';
     timerEl.style.fontSize = '1.2rem';
     
     if (header) {
-        // close-btn(index 0) 다음, progress-bar(index 1) 앞에 삽입
         header.insertBefore(timerEl, header.children[1]);
     }
 
@@ -53,33 +51,45 @@ document.addEventListener('DOMContentLoaded', () => {
         return cookieValue;
     }
 
-    // --- [1. 타이머 로직] ---
+    // --- [1. 타이머 로직 (수정됨)] ---
+    function updateTimerUI() {
+        // 분:초 텍스트 업데이트
+        const minutes = Math.floor(state.timeLeft / 60);
+        const seconds = state.timeLeft % 60;
+        timerEl.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+        // 프로그레스 바 업데이트 (남은 시간 비율)
+        if (progressFill) {
+            const percentage = (state.timeLeft / TOTAL_TIME) * 100;
+            progressFill.style.width = `${percentage}%`;
+        }
+    }
+
     function startTimer() {
+        // 초기 UI 설정
+        updateTimerUI();
+
+        // 1초마다 실행
         state.timerId = setInterval(() => {
-            state.timeLeft--;
+            state.timeLeft--; // 시간 감소
 
-            // 텍스트 업데이트
-            const minutes = Math.floor(state.timeLeft / 60);
-            const seconds = state.timeLeft % 60;
-            timerEl.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-
-            // 프로그레스 바 업데이트
-            const elapsed = TOTAL_TIME - state.timeLeft;
-            const progress = (elapsed / TOTAL_TIME) * 100;
-            if (progressFill) {
-                progressFill.style.width = `${Math.min(progress, 100)}%`;
+            if (state.timeLeft >= 0) {
+                updateTimerUI();
             }
 
-            // 종료 체크
+            // 시간 종료 체크
             if (state.timeLeft <= 0) {
                 clearInterval(state.timerId);
-                finishGame();
+                finishGame(); // 게임 종료 함수 호출
             }
         }, 1000);
     }
 
     // --- [2. 퀴즈 로드 로직] ---
     async function loadQuiz() {
+        // 시간이 다 되었으면 퀴즈 로드 중단
+        if (state.timeLeft <= 0) return;
+
         try {
             state.isProcessing = false;
             const res = await fetch(config.urls.getQuiz);
@@ -92,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (questionWord) 
                 questionWord.innerText = data.quiz_word;
             if (feedbackMsg) 
-                feedbackMsg.innerHTML = "&nbsp"; 
+                feedbackMsg.innerHTML = "&nbsp;"; // 공백 유지
 
             // 버튼 생성
             if (optionsArea) {
@@ -160,6 +170,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // 다음 문제로 이동 (시간이 남았을 때만)
             if (state.timeLeft > 0) {
                 setTimeout(loadQuiz, 600);
+            } else {
+                // 타이밍 이슈로 시간이 0 이하가 되면 바로 종료
+                finishGame();
             }
 
         } catch (e) {
@@ -170,16 +183,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- [4. 게임 종료 로직] ---
     function finishGame() {
+        // 중복 호출 방지를 위해 타이머 확실히 제거
+        clearInterval(state.timerId);
         window.location.href = `${config.urls.result}?game_id=${state.gameId}`;
-        
     }   
 
     // --- [초기 실행] ---
     if (closeBtn) {
         closeBtn.addEventListener('click', () => {
+            // 타이머 일시 정지 (선택 사항)
+            // clearInterval(state.timerId); 
+            
             if (confirm('게임을 종료하시겠습니까?')) {
                 clearInterval(state.timerId);
                 window.history.back();
+            } else {
+                // 취소 시 타이머 재개 로직이 필요하다면 여기에 추가
+                // 현재는 그냥 계속 흘러감
             }
         });
     }
