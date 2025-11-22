@@ -39,7 +39,7 @@ def login_view(request):
             login(request, user)  # 세션에 사용자 로그인
             
             next_url = request.GET.get('next', settings.LOGIN_REDIRECT_URL)
-            return redirect(next_url)
+            return redirect('main')
     else:
         form = AuthenticationForm()
         
@@ -50,9 +50,11 @@ def logout_view(request):
     """
     로그아웃 
     """
-    logout(request)
+    if request.method == 'POST':
+        logout(request) 
+        return redirect('main') 
+    
     return render(request, 'accounts/logout.html')
-
 
 @login_required
 def profile_update_view(request):
